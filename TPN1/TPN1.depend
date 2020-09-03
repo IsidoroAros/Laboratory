@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1599094593 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.cpp
+	<iostream>
+
+1599097480 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\main.cpp
+	<iostream>
+	"funcionesTP.h"
+
+1599097509 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.h
+
