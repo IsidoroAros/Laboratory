@@ -1,9 +1,9 @@
 #include <iostream>
-#include <cstdio.h>
+#include <cstdio>
+#include <stdlib.h>
 #include "funcionesTP.h"
-
+#include "menus.h"
 using namespace std;
-
 
 bool validarFecha( int dia, int mes, int anio){
 
@@ -58,7 +58,7 @@ Usuario cargarUsuario(){
 
     cout << "Ingrese ID:\t";
     cin >> registro.id;
-    /// chequear si el usuario ya existe buscarregistro();
+    /// chequear si el usuario ya existe buscarRegistro();
     cout << "Nombre:\t";
     cin.ignore();
     cin.getline(registro.nombres,50,'\n');
@@ -67,6 +67,7 @@ Usuario cargarUsuario(){
     cin.getline(registro.apellidos,50,'\n');
 	cout << "Ingrese fecha de nacimiento:\t";
 	cin >> dia >> mes >> anio;
+	/// agregar funcion de Eugenio de fechas
 	while(validarFecha(dia,mes,anio)==0){
         cout << "Fecha invalida, reingrese:\t";
         cin >> dia;
@@ -90,5 +91,153 @@ Usuario cargarUsuario(){
 	return registro;
 
  }
+
+void guardarUsuario(){
+
+	FILE *p;
+	bool chequeo;
+	Usuario registro;
+
+	registro = cargarUsuario(); /// recibo los datos de la funcion
+    p = fopen("usuarios.dat","ab");
+		if(p==NULL){
+			cout << "Error al abrir el archivo \n";
+			return;
+		}
+		chequeo = fwrite(&registro, sizeof(Usuario),1,p);
+			if(chequeo==1){
+                cout << "El registro se guardo correctamente \n\n";
+                fclose(p);
+                system("pause");
+                system("cls");
+                return;
+			}else{
+                cout << "El registro no pudo guardarse \n\n";
+                fclose(p);
+				system("pause");
+                system("cls");
+                return;
+			}
+ }
+
+void modificarUsuario(){
+
+    FILE *p;
+	int posicion;
+	Usuario regAux;
+	bool guardo;
+
+	p = fopen("usuarios.dat","rb+");
+		if(p==NULL){
+			cout << "Error al abrir el archivo \n";
+			return;
+		}
+
+		posicion = buscarID();
+					if(posicion==-1){
+                cout << "Modificacion fallida\n";
+                fclose(p);
+                system("pause");
+                system("cls");
+                return;
+			}
+		regAux = leer_usuario(posicion);
+        cout << "Nuevo peso:\t";
+        cin >> regAux.peso;
+        cout << "Nuevo perfil de actividad:\t";
+        cin >> regAux.perfAct;
+        cout << "¿Apto medico?\t";
+        cin >> regAux.aptoMedico;
+
+		fseek(p,sizeof(Usuario)*posicion,SEEK_SET);
+		guardo = fwrite(&regAux,sizeof(Usuario),1,p);
+			if(guardo==1){
+                cout << "Modificacion exitosa\n";
+                fclose(p);
+                system("pause");
+                system("cls");
+                return;
+			}else{
+				cout << "Modificacion fallida\n";
+				fclose(p);
+				system("pause");
+                system("cls");
+				return;
+			}
+ }
+
+ int buscarID(){
+
+	int idUsuario, contador=0;
+	Usuario reg;
+	FILE *p;
+
+	cout << "Ingrese el ID:\t";
+	cin >> idUsuario;
+
+    p = fopen("usuarios.dat","ab");
+		if(p==NULL){
+			cout << "Error al abrir el archivo \n";
+			return -1;
+		}
+
+		while(fread(&reg, sizeof(Usuario),1, p)==1){
+            contador++;
+            if(reg.id == idUsuario){
+                cout << "ID coincidente\n";
+                fclose(p);
+                return contador;
+            }
+		}
+		cout << "No hay ID coincidente \n";
+		fclose(p);
+		return -1;
+ }
+
+Usuario leer_usuario(int pos){
+    Usuario reg;
+    FILE *p = fopen("usuarios.dat", "rb");
+    if (p == NULL){
+        reg.id = 0;
+        return reg;
+    }
+	if(pos == -1){
+        cout << "Posicion incorrecta\n";
+
+			reg.id = 0;
+			system("pause");
+			system("cls");
+			return reg;
+	}
+    fseek(p, pos * sizeof(Usuario), SEEK_SET);
+    fread(&reg, sizeof(Usuario), 1, p);
+    fclose(p);
+    return reg;
+}
+
+void listarUsuariosActivos(){
+
+	FILE *p;
+	Usuario reg;
+    p = fopen("usuarios.dat","rb+");
+		if(p==NULL){
+			cout << "Error al abrir el archivo \n";
+			return;
+		}
+
+        while(fread(&reg,sizeof(Usuario),1,p)==1){
+			if(reg.estado==1){
+				cout<<"ID: "<<reg.id<<endl;
+				cout<<"Nombres:"<<reg.nombres<<endl;
+				cout<<"Apellidos: "<<reg.apellidos<<endl;
+				cout<<"Fecha de Nacimiento:"<<reg.fecha.dia<<"/"<<reg.fecha.mes<<"/"<<reg.fecha.anio<<endl;
+				cout<<"Altura"<<reg.altura<<endl;
+				cout<<"Peso: "<<reg.peso<<endl;
+				cout<<"Perfil: "<<reg.perfAct<<endl;
+				cout<<"Apto: "<<reg.aptoMedico<<endl;
+				}
+        }
+        fclose(p);
+}
 
 

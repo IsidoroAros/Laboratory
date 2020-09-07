@@ -30,5 +30,10 @@ struct Usuario{
 
 bool validarFecha( int dia, int mes, int anio); // Función que valida una fecha:
 Usuario cargarUsuario();
+void guardarUsuario();
+void modificarUsuario();
+int buscarID();
+Usuario leer_usuario(int pos);
+void listarUsuariosActivos();
 
 #endif // FUNCIONESTP_H_INCLUDED

@@ -8,3 +8,28 @@
 
 1599097509 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.h
 
+1599506386 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
+1599506414 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
+
+1599505726 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
+1599501875 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.h
+
+1599506434 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
