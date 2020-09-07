@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1599441041 source:d:\reuge\documents\utn\2do cuatri\lab2\projectos\laragym\laragym\rutinas.cpp
+
+1599444654 source:d:\reuge\documents\utn\2do cuatri\lab2\projectos\laragym\laragym\usuario.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	"usuario.h"
+	"rutinas.h"
+	"menu.h"
+
+1599448357 source:d:\reuge\documents\utn\2do cuatri\lab2\projectos\laragym\laragym\main.cpp
+	<iostream>
+	<cstdio>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	"usuario.h"
+	"rutinas.h"
+	"menu.h"
+
+1599442066 d:\reuge\documents\utn\2do cuatri\lab2\projectos\laragym\laragym\usuario.h
+
+1599426017 d:\reuge\documents\utn\2do cuatri\lab2\projectos\laragym\laragym\rutinas.h
+
+1599438870 d:\reuge\documents\utn\2do cuatri\lab2\projectos\laragym\laragym\menu.h
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	"usuario.h"
+	"rutinas.h"
+
+1599442313 source:d:\reuge\documents\utn\2do cuatri\lab2\projectos\laragym\laragym\menu.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	"usuario.h"
+	"rutinas.h"
+	"menu.h"
+
