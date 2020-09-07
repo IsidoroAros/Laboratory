@@ -33,3 +33,28 @@
 	"funcionesTP.h"
 	"menus.h"
 
+1599509687 source:c:\users\daveq\documents\github\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
+1599509673 c:\users\daveq\documents\github\laboratory\tpn1\funcionestp.h
+
+1599506740 c:\users\daveq\documents\github\laboratory\tpn1\menus.h
+
+1599506740 source:c:\users\daveq\documents\github\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
+1599509673 source:c:\users\daveq\documents\github\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+

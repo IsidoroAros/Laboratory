@@ -35,5 +35,6 @@ void modificarUsuario();
 int buscarID();
 Usuario leer_usuario(int pos);
 void listarUsuariosActivos();
-
+void listarId();
+void mostrarReg(Usuario reg);
 #endif // FUNCIONESTP_H_INCLUDED

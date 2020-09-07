@@ -35,6 +35,8 @@
 		<Unit filename="funcionesTP.cpp" />
 		<Unit filename="funcionesTP.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menus.cpp" />
+		<Unit filename="menus.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

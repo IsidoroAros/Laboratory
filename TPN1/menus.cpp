@@ -8,6 +8,7 @@ using namespace std;
 void menu(){
 
     while(true){
+        system("cls");
         cout<<"1 - USUARIOS"<<endl;
         cout<<"2 - ENTRENAMIENTOS"<<endl;
         cout<<"3 - REPORTES"<<endl;
@@ -35,10 +36,10 @@ void menu(){
 void menuUsuarios(){
 
     while(true){
-
+        system("cls");
         cout<<"1 - NUEVO USUARIO "<<endl;
         cout<<"2 - EDITAR USUARIO "<<endl;
-        cout<<"3 - LISTAR X ID "<<endl;
+        cout<<"3 - LISTAR POR ID "<<endl;
         cout<<"4 - LISTAR USUARIOS ACTIVOS"<<endl;
         cout<<"5 - LISTAR USUARIOS INACTIVOS"<<endl;
         cout<<"------------------------------"<<endl;
@@ -56,6 +57,7 @@ void menuUsuarios(){
             modificarUsuario();
             break;
         case 3:
+            listarId();
             break;
         case 4:
         listarUsuariosActivos();
