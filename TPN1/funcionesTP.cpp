@@ -5,8 +5,7 @@
 #include "menus.h"
 using namespace std;
 
-bool validarFecha( int dia, int mes, int anio)
-{
+bool validarFecha( int dia, int mes, int anio){
 
 // Precondición: Se han de recibir tres parámetros, todos ellos de tipo entero.
 // Poscondición: Se devolverá un 0/false o un 1/true.
@@ -46,7 +45,7 @@ bool validarFecha( int dia, int mes, int anio)
 
         case 2:
 //Si el año es bisiesto +1 día.
-            if( (anio%4 == 0)   &&   (anio%100 != 0)   ||   (anio%400 == 0) )
+            if( ((anio%4 == 0)   &&   (anio%100 != 0)) ||   (anio%400 == 0) )
             {
                 if( dia >= 1 && dia <= 29 )
                 {
@@ -69,8 +68,7 @@ bool validarFecha( int dia, int mes, int anio)
     return fec;
 }
 
-Usuario cargarUsuario()
-{
+Usuario cargarUsuario(){
 
     int dia,mes,anio;
     Usuario registro;
@@ -111,8 +109,7 @@ Usuario cargarUsuario()
 
 }
 
-void guardarUsuario()
-{
+void guardarUsuario(){
 
     FILE *p;
     bool chequeo;
@@ -144,13 +141,13 @@ void guardarUsuario()
     }
 }
 
-void modificarUsuario()
-{
+void modificarUsuario(){
 
     FILE *p;
     int posicion;
     Usuario regAux;
     bool guardo;
+    int idUsuario;
 
     p = fopen("usuarios.dat","rb+");
     if(p==NULL)
@@ -159,8 +156,11 @@ void modificarUsuario()
         return;
     }
 
-    posicion = buscarID();
-    if(posicion==-1)
+    cout << "Ingrese el ID:\t";
+    cin >> idUsuario;
+
+    posicion = buscarID(idUsuario);
+    if(posicion<0)
     {
         cout << "Modificacion fallida\n";
         fclose(p);
@@ -196,35 +196,29 @@ void modificarUsuario()
     }
 }
 
-int buscarID()
-{
+int buscarID(int id){
 
-    int idUsuario, contador=0;
+    int contador=0;
     Usuario reg;
     FILE *p;
 
-    cout << "Ingrese el ID:\t";
-    cin >> idUsuario;
-
-    p = fopen("usuarios.dat","ab");
+    p = fopen("usuarios.dat","rb");
     if(p==NULL)
     {
-        cout << "Error al abrir el archivo \n";
-        return -1;
+        return -1;///codigo de error de que no halló el archivo.
     }
 
     while(fread(&reg, sizeof(Usuario),1, p)==1)
     {
-        contador++;
-        if(reg.id == idUsuario)
+        if(reg.id == id)
         {
-            cout << "ID coincidente\n";
             fclose(p);
             return contador;
         }
+        contador++;
     }
     fclose(p);
-    return -1;
+    return -2;///codigo de error de usuario inexistente.
 }
 
 Usuario leer_usuario(int pos){
@@ -250,7 +244,7 @@ Usuario leer_usuario(int pos){
     return reg;
 }
 
-void listarUsuariosActivos(){
+void listarUsuarios(){
 
     FILE *p;
     Usuario reg;
@@ -263,9 +257,7 @@ void listarUsuariosActivos(){
 
     while(fread(&reg,sizeof(Usuario),1,p)==1)
     {
-        if(reg.estado==1)
-        {
-            cout<<"ID: "<<reg.id<<endl;
+            cout<<"\n\nID: "<<reg.id<<endl;
             cout<<"Nombres: "<<reg.nombres<<endl;
             cout<<"Apellidos: "<<reg.apellidos<<endl;
             cout<<"Fecha de Nacimiento:"<<reg.fecha.dia<<"/"<<reg.fecha.mes<<"/"<<reg.fecha.anio<<endl;
@@ -273,8 +265,9 @@ void listarUsuariosActivos(){
             cout<<"Peso: "<<reg.peso<<endl;
             cout<<"Perfil: "<<reg.perfAct<<endl;
             cout<<"Apto: "<<reg.aptoMedico<<endl;
-            cout<<endl;
-        }
+            if(reg.estado==true){
+                cout<<"Estado: Activo"<<endl;
+            }else{cout<<"Estado: Pasivo"<<endl;}
     }
     system("PAUSE");
     fclose(p);
@@ -283,27 +276,40 @@ void listarUsuariosActivos(){
 void listarId(){
     int user;
     FILE *p;
+    int idUsuario;
     Usuario reg;
-    user=buscarID();
-    if(user!=-1){
-    p = fopen("usuarios.dat","rb+");
-    if(p==NULL)
-    {
-        cout << "Error al abrir el archivo \n";
-        return;
-    }
-    fseek(p,sizeof(Usuario)*user,SEEK_SET);
-    fread(&reg,sizeof(Usuario),1,p);
-    mostrarReg(reg);
-    fclose(p);
+
+    cout << "Ingrese el ID:\t";
+    cin >> idUsuario;
+
+    user=buscarID(idUsuario);
+    cout<<"user: "<<user<<endl;
     system("PAUSE");
-    }
-    else{
-        cout<<"ID INEXISTENTE!"<<endl;
+
+    if(user>=0){
+        p = fopen("usuarios.dat","rb");
+        if(p==NULL)
+        {
+            cout << "Error al abrir el archivo \n";
+            return;
+        }
+        fseek(p,sizeof(Usuario)*user,SEEK_SET);
+        fread(&reg,sizeof(Usuario),1,p);
+        mostrarReg(reg);
+        fclose(p);
         system("PAUSE");
     }
+    else if(user==-2){
+        cout<<"Id inexistente!\n";
+        system("PAUSE");
+    }else{
+        cout << "Error al abrir el archivo \n";
+        system("PAUSE");
+        }
 }
+
 void mostrarReg(Usuario reg){
+    if(reg.estado==true){
     cout<<"ID: "<<reg.id<<endl;
     cout<<"Nombres: "<<reg.nombres<<endl;
     cout<<"Apellidos: "<<reg.apellidos<<endl;
@@ -312,5 +318,56 @@ void mostrarReg(Usuario reg){
     cout<<"Peso: "<<reg.peso<<endl;
     cout<<"Perfil: "<<reg.perfAct<<endl;
     cout<<"Apto: "<<reg.aptoMedico<<endl;
+    cout<<"Estado: "<<reg.estado<<endl;
     cout<<endl;
+    }else{
+        cout<<"\nusuario eliminado"<<endl<<endl;
+        }
 }
+
+void eliminarUsuario(int posicion){
+
+    FILE *p;
+    Usuario regAux;
+    bool guardo;
+    int idUsuario;
+
+    p = fopen("usuarios.dat","rb+");
+    if(p==NULL)
+    {
+        cout << "Error al abrir el archivo \n";
+        return;
+    }
+
+    cout << "ingrese el ID:\t";
+    cin >> idUsuario;
+
+    if(posicion<0)
+    {
+        cout << "\neliminacion fallida";
+        fclose(p);
+        system("pause");
+        return;
+    }
+    regAux = leer_usuario(posicion);
+    regAux.estado=false;
+
+    fseek(p,sizeof(Usuario)*posicion,SEEK_SET);
+    guardo = fwrite(&regAux,sizeof(Usuario),1,p);
+    if(guardo==1)
+    {
+        cout << "\nusuario eliminado exitosamente";
+        fclose(p);
+        system("pause");
+        return;
+    }
+    else
+    {
+        cout << "\neliminacion fallida";
+        fclose(p);
+        system("pause");
+        return;
+    }
+
+}
+

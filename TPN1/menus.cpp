@@ -5,9 +5,11 @@
 #include "menus.h"
 using namespace std;
 
-void menu(){
+void menu()
+{
 
-    while(true){
+    while(true)
+    {
         system("cls");
         cout<<"1 - USUARIOS"<<endl;
         cout<<"2 - ENTRENAMIENTOS"<<endl;
@@ -20,35 +22,39 @@ void menu(){
         cin>>opcion;
 
         system("cls");
-        switch(opcion){
+        switch(opcion)
+        {
         case 1:
             menuUsuarios();
             break;
         case 0:
             return;
         default:
-                cout << "OPCION INCORRECTA \n";
+            cout << "OPCION INCORRECTA \n";
             break;
         }
     }
 }
 
-void menuUsuarios(){
+void menuUsuarios()
+{
 
-    while(true){
+    while(true)
+    {
         system("cls");
         cout<<"1 - NUEVO USUARIO "<<endl;
-        cout<<"2 - EDITAR USUARIO "<<endl;
-        cout<<"3 - LISTAR POR ID "<<endl;
-        cout<<"4 - LISTAR USUARIOS ACTIVOS"<<endl;
-        cout<<"5 - LISTAR USUARIOS INACTIVOS"<<endl;
+        cout<<"2 - MODIFICAR USUARIO "<<endl;
+        cout<<"3 - LISTAR USUARIO POR ID "<<endl;
+        cout<<"4 - LISTAR TODOS LOS USUARIOS"<<endl;
+        cout<<"5 - ELIMINAR USUARIO "<<endl;
         cout<<"------------------------------"<<endl;
-        cout<<"0 - VOLVER"<<endl;
+        cout<<"0 - VOLVER AL MENU PRINCIPAL"<<endl;
         int opcion;
         cout<<"> ";
         cin>> opcion;
         system("cls");
-        switch(opcion){
+        switch(opcion)
+        {
 
         case 1:
             guardarUsuario();
@@ -60,7 +66,13 @@ void menuUsuarios(){
             listarId();
             break;
         case 4:
-        listarUsuariosActivos();
+            listarUsuarios();
+            break;
+        case 5:
+            int idBaja;
+            cout<<"ingrese id del usuario a eliminar";
+            cin>>idBaja;
+            eliminarUsuario(buscarID(idBaja));
             break;
         case 0:
             return;

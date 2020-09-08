@@ -32,9 +32,10 @@ bool validarFecha( int dia, int mes, int anio); // Función que valida una fecha:
 Usuario cargarUsuario();
 void guardarUsuario();
 void modificarUsuario();
-int buscarID();
+int buscarID(int );
 Usuario leer_usuario(int pos);
-void listarUsuariosActivos();
+void listarUsuarios();
 void listarId();
 void mostrarReg(Usuario reg);
+void eliminarUsuario(int);
 #endif // FUNCIONESTP_H_INCLUDED
