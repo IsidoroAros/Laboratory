@@ -1,4 +1,4 @@
-#include <iostream>
+z#include <iostream>
 using namespace std;
 #include <cstdio>
 #include <ctime>
@@ -10,7 +10,7 @@ using namespace std;
 const int TOPE_MIN= 13;
 
 Fecha hoy();
-void validarEdad( int,  int, int );
+void validarEdad(int, int, int );
 int main()
 {
 
@@ -43,8 +43,7 @@ int main()
     return 0;
 }
 
-void validarEdad(int  dia, int mes, int anio)
-{
+void validarEdad(int  dia, int mes, int anio){
     int edad;
     Fecha fecha= hoy();
 
@@ -74,8 +73,6 @@ void validarEdad(int  dia, int mes, int anio)
     {
         cout <<"La edad es incorrecta: " << endl;
     }
-
-
 }
 
 Fecha hoy()

@@ -1,81 +1,26 @@
 #include <iostream>
 #include <cstdio>
 #include <stdlib.h>
+#include <ctime>
 #include "funcionesTP.h"
 #include "menus.h"
+#include "fechas.h"
 using namespace std;
 
-bool validarFecha( int dia, int mes, int anio){
 
-// Precondición: Se han de recibir tres parámetros, todos ellos de tipo entero.
-// Poscondición: Se devolverá un 0/false o un 1/true.
-
-    bool fec = 0;
-
-    if( mes >= 1 && mes <= 12 )
-    {
-
-        switch( mes )
-        {
-
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            if( dia >= 1 && dia <= 31 )
-            {
-                fec = true;
-            }
-            break;
-
-
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            if( dia >= 1 && dia <= 30 )
-            {
-                fec = true;
-            }
-            break;
-
-
-        case 2:
-//Si el año es bisiesto +1 día.
-            if( ((anio%4 == 0)   &&   (anio%100 != 0)) ||   (anio%400 == 0) )
-            {
-                if( dia >= 1 && dia <= 29 )
-                {
-                    fec = true;
-                }
-            }
-            else
-            {
-                if( dia >= 1 && dia <= 28 )
-                {
-                    fec = true;
-                }
-            }
-            break;
-
-        }
-
-    }
-
-    return fec;
-}
 
 Usuario cargarUsuario(){
 
     int dia,mes,anio;
     Usuario registro;
+    char apto;
 
     cout << "Ingrese ID:\t";
     cin >> registro.id;
-    /// chequear si el usuario ya existe buscarRegistro();
+    while(buscarID(registro.id)!=-2){
+        cout << "ID ya registrado, ingrese otro ID:\t";
+        cin >> registro.id;
+    } /// falta validar un id mayor que 0 y menor a 9999
     cin.ignore();
     cout << "Nombre:\t";
     cin.getline(registro.nombres,50,'\n');
@@ -83,13 +28,14 @@ Usuario cargarUsuario(){
     cin.getline(registro.apellidos,50,'\n');
     cout << "Ingrese fecha de nacimiento:\t";
     cin >> dia >> mes >> anio;
-    /// agregar funcion de Eugenio de fechas
-    while(validarFecha(dia,mes,anio)==0)
-    {
+
+    while(validarEdad(dia,mes,anio)==false){
+
         cout << "Fecha invalida, reingrese:\t";
         cin >> dia;
         cin >> mes;
         cin >> anio;
+
     }
     registro.fecha.dia = dia;
     registro.fecha.mes = mes;
@@ -102,7 +48,12 @@ Usuario cargarUsuario(){
     cout << "Perfil de actividad:\t";
     cin >> registro.perfAct;
     cout << "¿Tiene apto medico?\t";
-    cin >> registro.aptoMedico;
+    cin >> apto;
+        while(apto != 'S' || apto != 's' || apto != 'N' || apto != 'n'){
+                fflush(stdin);
+            cout << "INCORRECTO, ¿Tiene apto medico?\t";
+            cin >> apto;
+        }
     registro.estado = true;
 
     return registro;
@@ -168,7 +119,7 @@ void modificarUsuario(){
         system("cls");
         return;
     }
-    regAux = leer_usuario(posicion);
+    regAux = leerUsuario(posicion);
     cout << "Nuevo peso:\t";
     cin >> regAux.peso;
     cout << "Nuevo perfil de actividad:\t";
@@ -221,16 +172,14 @@ int buscarID(int id){
     return -2;///codigo de error de usuario inexistente.
 }
 
-Usuario leer_usuario(int pos){
+Usuario leerUsuario(int pos){
     Usuario reg;
     FILE *p = fopen("usuarios.dat", "rb");
-    if (p == NULL)
-    {
+    if (p == NULL){
         reg.id = 0;
         return reg;
     }
-    if(pos == -1)
-    {
+    if(pos == -1){
         cout << "Posicion incorrecta\n";
 
         reg.id = 0;
@@ -267,7 +216,7 @@ void listarUsuarios(){
             cout<<"Apto: "<<reg.aptoMedico<<endl;
             if(reg.estado==true){
                 cout<<"Estado: Activo"<<endl;
-            }else{cout<<"Estado: Pasivo"<<endl;}
+            }else{cout<<"Estado: Inactivo"<<endl;}
     }
     system("PAUSE");
     fclose(p);
@@ -281,16 +230,15 @@ void listarId(){
 
     cout << "Ingrese el ID:\t";
     cin >> idUsuario;
-
-    user=buscarID(idUsuario);
-    cout<<"user: "<<user<<endl;
-    system("PAUSE");
+    user = buscarID(idUsuario);
+    //cout<<"Ubicacion: "<<user+1<<endl;
+    //system("PAUSE");
 
     if(user>=0){
         p = fopen("usuarios.dat","rb");
         if(p==NULL)
         {
-            cout << "Error al abrir el archivo \n";
+            cout << "Error al abrir el archivo\n";
             return;
         }
         fseek(p,sizeof(Usuario)*user,SEEK_SET);
@@ -300,7 +248,7 @@ void listarId(){
         system("PAUSE");
     }
     else if(user==-2){
-        cout<<"Id inexistente!\n";
+        cout<<"ID inexistente\n";
         system("PAUSE");
     }else{
         cout << "Error al abrir el archivo \n";
@@ -321,7 +269,7 @@ void mostrarReg(Usuario reg){
     cout<<"Estado: "<<reg.estado<<endl;
     cout<<endl;
     }else{
-        cout<<"\nusuario eliminado"<<endl<<endl;
+        cout<<"\nUsuario eliminado"<<endl<<endl;
         }
 }
 
@@ -335,35 +283,35 @@ void eliminarUsuario(int posicion){
     p = fopen("usuarios.dat","rb+");
     if(p==NULL)
     {
-        cout << "Error al abrir el archivo \n";
+        cout << "Error al abrir el archivo\n";
         return;
     }
 
-    cout << "ingrese el ID:\t";
+    cout << "Ingrese el ID:\t";
     cin >> idUsuario;
-
+    buscarID(idUsuario);
     if(posicion<0)
     {
-        cout << "\neliminacion fallida";
+        cout << "\n Eliminacion fallida";
         fclose(p);
         system("pause");
         return;
     }
-    regAux = leer_usuario(posicion);
+    regAux = leerUsuario(posicion);
     regAux.estado=false;
 
     fseek(p,sizeof(Usuario)*posicion,SEEK_SET);
     guardo = fwrite(&regAux,sizeof(Usuario),1,p);
     if(guardo==1)
     {
-        cout << "\nusuario eliminado exitosamente";
+        cout << "\nUsuario eliminado con exito";
         fclose(p);
         system("pause");
         return;
     }
     else
     {
-        cout << "\neliminacion fallida";
+        cout << "\nEliminacion fallida";
         fclose(p);
         system("pause");
         return;
