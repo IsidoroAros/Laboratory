@@ -1,9 +1,8 @@
 #ifndef RUTINAS_H_INCLUDED
 #define RUTINAS_H_INCLUDED
-//struct Autonum{
-//        int numero;
-//        bool existe;
-//};
+
+#include "fechas.h"
+
 struct Rutina{
     int id;
     int idUsuario;

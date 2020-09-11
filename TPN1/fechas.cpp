@@ -2,10 +2,15 @@
 #include <cstdio>
 #include <stdlib.h>
 #include <ctime>
+#include <string.h>
+#include <cctype>
+#include <algorithm>
+#include "rutinas.h"
 #include "funcionesTP.h"
 #include "menus.h"
 #include "fechas.h"
-using namespace std;
+#include "ui.h"
+#include "rlutil.h"
 
 Fecha hoy(){
 

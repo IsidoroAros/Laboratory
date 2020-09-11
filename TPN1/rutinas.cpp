@@ -8,8 +8,7 @@
 #include "fechas.h"
 #include "rutinas.h"
 using namespace std;
-void nuevaRutina()
-{
+void nuevaRutina(){
 
     FILE *p;
     bool chequeo;
@@ -72,6 +71,3 @@ int crearId()
     return cant+1000;
 
 }
-//Autonum incrementa(){
-//
-//}

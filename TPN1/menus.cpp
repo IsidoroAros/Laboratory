@@ -3,10 +3,16 @@
 #include <stdlib.h>
 #include <ctime>
 #include <string.h>
+#include <cctype>
+#include <algorithm>
+#include "rutinas.h"
 #include "funcionesTP.h"
 #include "menus.h"
 #include "fechas.h"
-#include "rutinas.h"
+#include "ui.h"
+#include "rlutil.h"
+
+using namespace rlutil;
 using namespace std;
 
 
@@ -45,9 +51,11 @@ void menu()
 void menuUsuarios()
 {
 
-    while(true)
-    {
+    while(true){
+
         system("cls");
+        //title("MAIN MENU", APP_TITLEFORECOLOR, APP_TITLEBACKCOLOR);
+        //gotoxy(1, 5);
         cout<<"1 - NUEVO USUARIO "<<endl;
         cout<<"2 - MODIFICAR USUARIO "<<endl;
         cout<<"3 - LISTAR USUARIO POR ID "<<endl;

@@ -8,20 +8,7 @@
 
 1599097509 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.h
 
-1599784056 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
-	<iostream>
-	<cstdio>
-	<stdlib.h>
-	<ctime>
-	<string.h>
-	"funcionesTP.h"
-	"menus.h"
-	"fechas.h"
-
-1599785313 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
-	"fechas.h"
-
-1599781156 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
+1599801858 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -29,21 +16,47 @@
 	<string.h>
 	<cctype>
 	<algorithm>
+	"rutinas.h"
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"
+	"ui.h"
+	"rlutil.h"
 
-1599501875 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.h
+1599798289 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
+	"fechas.h"
 
-1599784425 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
+1599801853 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
 	<ctime>
 	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599798289 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.h
+
+1599799221 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
 
 1599533261 source:c:\users\daveq\documents\github\laboratory\tpn1\funcionestp.cpp
 	<iostream>
@@ -70,14 +83,20 @@
 	"funcionesTP.h"
 	"menus.h"
 
-1599596038 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.cpp
+1599798879 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
 	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"
+	"ui.h"
+	"rlutil.h"
 
 1599594677 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.h
 
@@ -142,4 +161,34 @@
 	"menus.h"
 	"fechas.h"
 	"rutinas.h"
+
+1599798375 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599799451 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rutinas.h
+	"fechas.h"
+
+1599801029 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\ui.h
+
+1599494785 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
 

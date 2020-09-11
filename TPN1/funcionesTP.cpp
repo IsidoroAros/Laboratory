@@ -3,10 +3,19 @@
 #include <stdlib.h>
 #include <ctime>
 #include <string.h>
+#include <cctype>
+#include <algorithm>
+#include "rutinas.h"
 #include "funcionesTP.h"
 #include "menus.h"
 #include "fechas.h"
+#include "ui.h"
+#include "rlutil.h"
+
+using namespace rlutil;
 using namespace std;
+
+const char *FILE_USUARIOS = "archivos/usuarios.dat";
 
 Usuario cargarUsuario(){
 
@@ -17,6 +26,7 @@ Usuario cargarUsuario(){
     cout << "Ingrese ID:\t";
     cin >> registro.id;
     while(buscarID(registro.id)!=-2 || (registro.id<0 || registro.id>9999)){
+       // msj("ID erroneo, ingrese otro ID",APP_FORECOLOR, APP_ERRORCOLOR,1,1);
         cout << "ID erroneo, ingrese otro ID:\t";
         cin >> registro.id;
     } /// validacion id
@@ -85,7 +95,7 @@ void guardarUsuario(){
     Usuario registro;
 
     registro = cargarUsuario(); /// recibo los datos de la funcion
-    p = fopen("usuarios.dat","ab");
+    p = fopen(FILE_USUARIOS,"ab");
     if(p==NULL)
     {
         cout << "Error al abrir el archivo \n";
@@ -118,7 +128,7 @@ void modificarUsuario(){
     bool guardo;
     int idUsuario;
 
-    p = fopen("usuarios.dat","rb+");
+    p = fopen(FILE_USUARIOS,"rb+");
     if(p==NULL)
     {
         cout << "Error al abrir el archivo \n";
@@ -180,7 +190,7 @@ int buscarID(int id){
     Usuario reg;
     FILE *p;
 
-    p = fopen("usuarios.dat","rb");
+    p = fopen(FILE_USUARIOS,"rb");
 
     if(p==NULL){
         return -1;///codigo de error de que no halló el archivo.
@@ -199,7 +209,7 @@ int buscarID(int id){
 
 Usuario leerUsuario(int pos){
     Usuario reg;
-    FILE *p = fopen("usuarios.dat", "rb");
+    FILE *p = fopen(FILE_USUARIOS, "rb");
     if (p == NULL){
         reg.id = 0;
         return reg;
@@ -222,7 +232,7 @@ void listarUsuarios(){
 
     FILE *p;
     Usuario reg;
-    p = fopen("usuarios.dat","rb+");
+    p = fopen(FILE_USUARIOS,"rb+");
     if(p==NULL)
     {
         cout << "Error al abrir el archivo \n";
@@ -260,7 +270,7 @@ void listarId(){
     //system("PAUSE");
 
     if(user>=0){
-        p = fopen("usuarios.dat","rb");
+        p = fopen(FILE_USUARIOS,"rb");
         if(p==NULL)
         {
             cout << "Error al abrir el archivo\n";
@@ -306,7 +316,7 @@ void eliminarUsuario(){
     int idUsuario, posicion;
     char opc;
 
-    p = fopen("usuarios.dat","rb+");
+    p = fopen(FILE_USUARIOS,"rb+");
     if(p==NULL)
     {
         cout << "Error al abrir el archivo\n";
