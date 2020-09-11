@@ -27,13 +27,9 @@ void menu()
         system("cls");
         switch(opcion)
         {
-        case 1:
-            menuUsuarios();
-            break;
-        case 0:
-            return;
-        default:
-            break;
+            case 1:menuUsuarios();break;
+            case 0:return;
+            default:break;
         }
     }
 }
@@ -57,31 +53,13 @@ void menuUsuarios()
         system("cls");
         switch(opcion)
         {
-
-        case 1:
-            guardarUsuario();
-            break;
-        case 2:
-            modificarUsuario();
-            break;
-        case 3:
-            listarId();
-            break;
-        case 4:
-            listarUsuarios();
-            break;
-        case 5:
-            int idBaja;
-            cout<<"ingrese id del usuario a eliminar";
-            cin>>idBaja;
-            eliminarUsuario(buscarID(idBaja));
-            break;
-        case 0:
-            return;
-            break;
-		default:
-            break;
-
+            case 1: guardarUsuario();    break;
+            case 2: modificarUsuario();  break;
+            case 3: listarId();                 break;
+            case 4: listarUsuarios();       break;
+            case 5: eliminarUsuario();    break;
+            case 0: return;                     break;
+            default:                                break;
         }
     }
 }

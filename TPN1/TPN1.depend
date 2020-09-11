@@ -90,7 +90,7 @@
 	"menus.h"
 	"fechas.h"
 
-1599786438 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.h
+1599788385 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.h
 	"fechas.h"
 
 1599612996 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\fechas.h
@@ -109,7 +109,7 @@
 	"menus.h"
 	"fechas.h"
 
-1599786438 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.cpp
+1599788313 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -119,7 +119,7 @@
 	"menus.h"
 	"fechas.h"
 
-1599787365 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.cpp
+1599788188 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>

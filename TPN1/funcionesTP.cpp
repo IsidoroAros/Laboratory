@@ -300,12 +300,13 @@ void mostrarReg(Usuario reg){
         }
 }
 
-void eliminarUsuario(int posicion){
+void eliminarUsuario(){
 
     FILE *p;
     Usuario regAux;
     bool guardo;
-    int idUsuario;
+    int idUsuario, posicion;
+    char opc;
 
     p = fopen("usuarios.dat","rb+");
     if(p==NULL)
@@ -316,13 +317,24 @@ void eliminarUsuario(int posicion){
 
     cout << "Ingrese el ID:\t";
     cin >> idUsuario;
-    buscarID(idUsuario);
+    posicion=buscarID(idUsuario);
     if(posicion<0)
     {
         cout << "\n Eliminacion fallida";
         fclose(p);
         system("pause");
         return;
+    }
+    cout<<"\nse va a eliminar el usuario con ID nro: "<<idUsuario<<endl;
+
+    cout<<" continuar (S/N):"<<endl;
+    cin>>opc;
+    switch(opc){
+        case 'S':  break;
+        case 's':  break;
+        case 'N': return; break;
+        case 'n': return ; break;
+        default: return; break;
     }
     regAux = leerUsuario(posicion);
     regAux.estado=false;

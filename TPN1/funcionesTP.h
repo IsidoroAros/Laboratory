@@ -39,7 +39,7 @@ void listarId(); /// Lista las características de un usuario por su ID
 
 void mostrarReg(Usuario reg); /// Muestra un registro que recibe por parametro
 
-void eliminarUsuario(int); /// Genera la baja lógica de un usuario mediante un ID
+void eliminarUsuario(); /// Genera la baja lógica de un usuario mediante un ID
 
 bool validarNombresApellidos(char *nombres, int tam); /// Valida que una cadena de caracteres no esté vacía
 
