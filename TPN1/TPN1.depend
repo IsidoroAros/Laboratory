@@ -8,7 +8,7 @@
 
 1599097509 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.h
 
-1599801858 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
+1599843549 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -26,7 +26,7 @@
 1599798289 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
 	"fechas.h"
 
-1599801853 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
+1599843549 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -43,7 +43,7 @@
 
 1599798289 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.h
 
-1599799221 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
+1599843549 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -162,7 +162,7 @@
 	"fechas.h"
 	"rutinas.h"
 
-1599798375 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rutinas.cpp
+1599843549 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rutinas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -176,7 +176,7 @@
 1599799451 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rutinas.h
 	"fechas.h"
 
-1599801029 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\ui.h
+1599843549 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\ui.h
 
 1599494785 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rlutil.h
 	<iostream>
@@ -191,4 +191,10 @@
 	<sys/ioctl.h>
 	<sys/types.h>
 	<sys/time.h>
+
+1599843549 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
 
