@@ -14,7 +14,7 @@ Usuario cargarUsuario(){
 
     int dia,mes,anio, retornoId;
     Usuario registro;
-    char apto, nombre[50], apellido[50];
+    char apto, perf, nombre[50], apellido[50];
 
     cout << "Ingrese ID:\t";
     cin >> registro.id;
@@ -58,13 +58,15 @@ Usuario cargarUsuario(){
     cout << "Peso:\t";
     cin >> registro.peso;
     cout << "Perfil de actividad:\t";
-    cin >> registro.perfAct;
-        while(registro.perfAct != 'a' || registro.perfAct != 'A'|| registro.perfAct != 'b'|| registro.perfAct != 'B'
-              || registro.perfAct != 'c'|| registro.perfAct != 'C'){
+    cin >> perf;
+        while(!(perf == 'A' || perf == 'a'
+                || perf == 'B' || perf == 'b'
+                || perf == 'C' || perf == 'c') ){
                 fflush(stdin);
             cout << "INCORRECTO, perfil de actividad:\t";
-            cin >> apto;
+            cin >>perf;
         }
+        registro.perfAct=perf;
     cout << "¿Tiene apto medico?\t";
     cin >> apto;
         while(apto != 'S' || apto != 's' || apto != 'N' || apto != 'n'){

@@ -76,10 +76,11 @@
 
 1599594677 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.h
 
-1599612996 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tpn1\main.cpp
+1599774268 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
+	<string.h>
 	<ctime>
 	"funcionesTP.h"
 	"menus.h"
@@ -101,7 +102,7 @@
 	"menus.h"
 	"fechas.h"
 
-1599614463 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tpn1\funcionestp.cpp
+1599616769 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
