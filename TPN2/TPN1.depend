@@ -1,0 +1,145 @@
+# depslib dependency file v1.0
+1599094593 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.cpp
+	<iostream>
+
+1599097480 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\main.cpp
+	<iostream>
+	"funcionesTP.h"
+
+1599097509 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.h
+
+1599784056 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599785313 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
+	"fechas.h"
+
+1599781156 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599501875 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.h
+
+1599784425 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599533261 source:c:\users\daveq\documents\github\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
+1599533261 c:\users\daveq\documents\github\laboratory\tpn1\funcionestp.h
+
+1599506740 c:\users\daveq\documents\github\laboratory\tpn1\menus.h
+
+1599506740 source:c:\users\daveq\documents\github\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
+1599533261 source:c:\users\daveq\documents\github\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	"funcionesTP.h"
+	"menus.h"
+
+1599596038 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599594677 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.h
+
+1599612996 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599788385 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.h
+	"fechas.h"
+
+1599612996 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\fechas.h
+
+1599792774 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.h
+
+1599786438 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599793879 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599792776 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599793918 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\rutinas.h
+
+1599796149 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
