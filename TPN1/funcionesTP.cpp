@@ -8,8 +8,6 @@
 #include "fechas.h"
 using namespace std;
 
-
-
 Usuario cargarUsuario(){
 
     int dia,mes,anio, retornoId;

@@ -3,6 +3,7 @@
 
 void menu();
 void menuUsuarios();
+void menuRutinas();
 
 
 #endif // MENUS_H_INCLUDED

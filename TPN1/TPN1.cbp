@@ -39,6 +39,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="menus.cpp" />
 		<Unit filename="menus.h" />
+		<Unit filename="rutinas.cpp" />
+		<Unit filename="rutinas.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

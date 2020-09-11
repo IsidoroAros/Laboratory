@@ -95,7 +95,7 @@
 
 1599612996 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\fechas.h
 
-1599527722 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.h
+1599792774 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.h
 
 1599786438 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\main.cpp
 	<iostream>
@@ -109,7 +109,18 @@
 	"menus.h"
 	"fechas.h"
 
-1599788313 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.cpp
+1599793879 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599792776 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -119,7 +130,9 @@
 	"menus.h"
 	"fechas.h"
 
-1599788188 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.cpp
+1599793918 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\rutinas.h
+
+1599796149 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\rutinas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -128,4 +141,5 @@
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"
+	"rutinas.h"
 
