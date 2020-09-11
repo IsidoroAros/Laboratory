@@ -19,8 +19,9 @@ using namespace std;
 void menu()
 {
 
-    while(true)
-    {
+    while(true){
+        title("MENU PRINCIPAL",BLACK,CYAN);
+        gotoxy(1,3);
         cout<<"1 - USUARIOS"<<endl;
         cout<<"2 - ENTRENAMIENTOS"<<endl;
         cout<<"3 - REPORTES"<<endl;
@@ -54,8 +55,8 @@ void menuUsuarios()
     while(true){
 
         system("cls");
-        //title("MAIN MENU", APP_TITLEFORECOLOR, APP_TITLEBACKCOLOR);
-        //gotoxy(1, 5);
+        title("USUARIOS",0,42);
+        gotoxy(1,3);
         cout<<"1 - NUEVO USUARIO "<<endl;
         cout<<"2 - MODIFICAR USUARIO "<<endl;
         cout<<"3 - LISTAR USUARIO POR ID "<<endl;
@@ -96,7 +97,8 @@ void menuUsuarios()
 void menuRutinas()
 {
     system("cls");
-    cout<<"MENÚ ENTRENAMIENTOS"<<endl;
+    title("ENTRENAMIENTOS",0,42);
+    gotoxy(1,3); /// El puntero arranca a partir de esta posicion
     cout<<"--------------------------------"<<endl;
     cout<<"1) NUEVO ENTRENAMIENTO"<<endl;
     cout<<"2) MODIFICAR ENTRENAMIENTO"<<endl;

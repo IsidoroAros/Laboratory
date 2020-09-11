@@ -22,12 +22,12 @@ Usuario cargarUsuario(){
     int dia,mes,anio, retornoId;
     Usuario registro;
     char apto, perf, nombre[50], apellido[50];
-
     cout << "Ingrese ID:\t";
     cin >> registro.id;
     while(buscarID(registro.id)!=-2 || (registro.id<0 || registro.id>9999)){
-       // msj("ID erroneo, ingrese otro ID",APP_FORECOLOR, APP_ERRORCOLOR,1,1);
-        cout << "ID erroneo, ingrese otro ID:\t";
+        cls();
+        msj("ID erroneo",WHITE,RED,130,TEXT_RIGHT);
+        gotoxy(1,5);cout << "\nIngrese otro ID:\t";
         cin >> registro.id;
     } /// validacion id
 
@@ -35,14 +35,21 @@ Usuario cargarUsuario(){
     cout << "Nombre:\t";
     cin.getline(nombre,50,'\n');
         while(validarNombresApellidos(nombre,50)==false){
-                cout << "Nombre incorrecto, vuelva a ingresar:\t";
+                cls();
+                msj("Nombre erroneo",WHITE,RED,130,TEXT_LEFT);
+                gotoxy(1,5);
+                cout << "Nuevo nombre:\t";
                 cin.getline(nombre,50,'\n');
         } /// validacion nombre
+
     cout << "Apellido:\t";
     cin.getline(apellido,50,'\n');
 
         while(validarNombresApellidos(apellido,50)==false){
-                cout << "Apellido incorrecto, vuelva a ingresar:\t";
+                cls();
+                msj("Apellido erroneo",WHITE,RED,130,TEXT_LEFT);
+                gotoxy(1,5);
+                cout << "Nuevo apellido:\t";
                 cin.getline(apellido,50,'\n');
         } /// validacion apellido
 
@@ -50,11 +57,13 @@ Usuario cargarUsuario(){
     cin >> dia >> mes >> anio;
 
     while(validarEdad(dia,mes,anio)==false){
-
-        cout << "Fecha invalida, reingrese:\t";
-        cin >> dia;
-        cin >> mes;
-        cin >> anio;
+                cls();
+                msj("Fecha erronea",WHITE,RED,130,TEXT_LEFT);
+                gotoxy(1,5);
+                cout << "Nueva fecha:\t";
+                cin >> dia;
+                cin >> mes;
+                cin >> anio;
 
     } /// validacion fecha
     registro.fecha.dia = dia;
@@ -63,29 +72,54 @@ Usuario cargarUsuario(){
 
     cout << "Altura:\t";
     cin >> registro.altura;
+        while(registro.altura<=0){
+                    cls();
+                    msj("Altura erronea",WHITE,RED,130,TEXT_LEFT);
+                    gotoxy(1,5);
+                    cout << "Nueva altura:\t";
+                    cin >> registro.altura;
+        }
     cout << "Peso:\t";
     cin >> registro.peso;
+        while(registro.peso<=0){
+                    cls();
+                    msj("Peso erroneo",WHITE,RED,130,TEXT_LEFT);
+                    gotoxy(1,5);
+                    cout << "Nuevo peso:\t";
+                    cin >> registro.peso;
+        }
     cout << "Perfil de actividad:\t";
     cin >> perf;
         while(!(perf == 'A' || perf == 'a'
                 || perf == 'B' || perf == 'b'
                 || perf == 'C' || perf == 'c') ){
+                    cls();
+                    msj("Perfil erroneo",WHITE,RED,130,TEXT_LEFT);
+                    gotoxy(1,5);
                 fflush(stdin);
-            cout << "INCORRECTO, perfil de actividad:\t";
+            cout << "Nuevo perfil de actividad:\t";
             cin >>perf;
-        }
+        }/// validacion perfil de actividad
+
         registro.perfAct=perf;
-    cout << "¿Tiene apto medico?\t";
+    /*cout << "¿Tiene apto medico?\t";
     cin >> apto;
         while(apto != 'S' || apto != 's' || apto != 'N' || apto != 'n'){
                 fflush(stdin);
-            cout << "INCORRECTO, ¿Tiene apto medico?\t";
+                    cls();
+                    msj("Apto erroneo",WHITE,RED,130,TEXT_LEFT);
+                    gotoxy(1,5);
+            cout << "Tiene apto medico?\t";
             cin >> apto;
-        }
+        }*//// validacion apto medico
     registro.estado = true;
 
-    return registro;
+    system("cls");
+    mostrarReg(registro);
+    system("pause");
+    system("cls");
 
+    return registro;
 }
 
 void guardarUsuario(){
@@ -94,7 +128,7 @@ void guardarUsuario(){
     bool chequeo;
     Usuario registro;
 
-    registro = cargarUsuario(); /// recibo los datos de la funcion
+    registro = cargarUsuario();
     p = fopen(FILE_USUARIOS,"ab");
     if(p==NULL)
     {
@@ -104,7 +138,9 @@ void guardarUsuario(){
     chequeo = fwrite(&registro, sizeof(Usuario),1,p);
     if(chequeo==1)
     {
-        cout << "El registro se guardo correctamente \n\n";
+        cls();
+        msj("Carga exitosa",WHITE,GREEN,130,TEXT_LEFT);
+        gotoxy(1,5);
         fclose(p);
         system("pause");
         system("cls");

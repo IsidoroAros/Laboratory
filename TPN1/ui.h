@@ -17,6 +17,7 @@ enum Orientation{
     TEXT_RIGHT,
     TEXT_CENTER
 };
+
 void setColors(int foreColor = APP_FORECOLOR, int backColor = APP_BACKCOLOR);
 void bar(int foreColor, int backColor, int y=SCREEN_HEIGHT, int width=SCREEN_WIDTH);
 void title(const char *mensaje, int foreColor = APP_TITLEFORECOLOR, int backColor = APP_TITLEBACKCOLOR);

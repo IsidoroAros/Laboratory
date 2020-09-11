@@ -31,6 +31,7 @@ void msj(const char *mensaje, int foreColor, int backColor, int y, Orientation o
     //TODO: Analizar la orientación
     gotoxy(1, y);
     cout << mensaje;
+    cout << endl;
     cin.ignore();
     getch();
     resetColor();
