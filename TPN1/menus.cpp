@@ -16,8 +16,7 @@ using namespace rlutil;
 using namespace std;
 
 
-void menu()
-{
+void menu(){
 
     while(true){
         title("MENU PRINCIPAL",BLACK,CYAN);
@@ -49,13 +48,12 @@ void menu()
     }
 }
 
-void menuUsuarios()
-{
+void menuUsuarios(){
 
     while(true){
 
         system("cls");
-        title("USUARIOS",0,42);
+        title("MENU USUARIOS",BLACK,CYAN);
         gotoxy(1,3);
         cout<<"1 - NUEVO USUARIO "<<endl;
         cout<<"2 - MODIFICAR USUARIO "<<endl;
@@ -94,8 +92,7 @@ void menuUsuarios()
     }
 }
 
-void menuRutinas()
-{
+void menuRutinas(){
     system("cls");
     title("ENTRENAMIENTOS",0,42);
     gotoxy(1,3); /// El puntero arranca a partir de esta posicion

@@ -25,7 +25,7 @@ int main(){
     rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
 
     printf("columns: %d\n", columns);
-    printf("rows: %d\n", rows);*/ /// para chequear el alto y ancho de consola
+    printf("rows: %d\n", rows); *//// para chequear el alto y ancho de consola
 	menu();
 
 return 0;

@@ -19,15 +19,18 @@ const char *FILE_USUARIOS = "archivos/usuarios.dat";
 
 Usuario cargarUsuario(){
 
-    int dia,mes,anio, retornoId;
+    int dia,mes,anio;
     Usuario registro;
-    char apto, perf, nombre[50], apellido[50];
-    cout << "Ingrese ID:\t";
+    char perf, nombre[50], apellido[50];
+    locate(1,2);cout << "Ingrese ID:\t";
     cin >> registro.id;
     while(buscarID(registro.id)!=-2 || (registro.id<0 || registro.id>9999)){
+        msj("ID erroneo",WHITE,RED,29,TEXT_LEFT);
+        ///locate(1,29);cout << "\nID erroneo\t";
+
         cls();
-        msj("ID erroneo",WHITE,RED,130,TEXT_RIGHT);
-        gotoxy(1,5);cout << "\nIngrese otro ID:\t";
+        title("NUEVO USUARIO");
+        gotoxy(1,2);cout << "Ingrese otro ID:\t";
         cin >> registro.id;
     } /// validacion id
 
@@ -35,32 +38,34 @@ Usuario cargarUsuario(){
     cout << "Nombre:\t";
     cin.getline(nombre,50,'\n');
         while(validarNombresApellidos(nombre,50)==false){
+                msj("Nombre erroneo",WHITE,RED,29,TEXT_LEFT);
                 cls();
-                msj("Nombre erroneo",WHITE,RED,130,TEXT_LEFT);
-                gotoxy(1,5);
-                cout << "Nuevo nombre:\t";
+                title("NUEVO USUARIO");
+                locate(1,2);cout << "Nuevo nombre:\t";
                 cin.getline(nombre,50,'\n');
         } /// validacion nombre
+    strcpy(registro.nombres,nombre);
+    getch();
 
     cout << "Apellido:\t";
     cin.getline(apellido,50,'\n');
-
         while(validarNombresApellidos(apellido,50)==false){
+                msj("Apellido erroneo",WHITE,RED,29,TEXT_LEFT);
                 cls();
-                msj("Apellido erroneo",WHITE,RED,130,TEXT_LEFT);
-                gotoxy(1,5);
-                cout << "Nuevo apellido:\t";
+                title("NUEVO USUARIO");
+                locate(1,2);cout << "Nuevo apellido:\t";
                 cin.getline(apellido,50,'\n');
         } /// validacion apellido
+    strcpy(registro.apellidos,apellido);
 
     cout << "Ingrese fecha de nacimiento:\t";
     cin >> dia >> mes >> anio;
 
     while(validarEdad(dia,mes,anio)==false){
+                msj("Fecha erronea",WHITE,RED,29,TEXT_LEFT);
                 cls();
-                msj("Fecha erronea",WHITE,RED,130,TEXT_LEFT);
-                gotoxy(1,5);
-                cout << "Nueva fecha:\t";
+                title("NUEVO USUARIO");
+                locate(1,5);cout << "Nueva fecha:\t";
                 cin >> dia;
                 cin >> mes;
                 cin >> anio;
@@ -73,10 +78,10 @@ Usuario cargarUsuario(){
     cout << "Altura:\t";
     cin >> registro.altura;
         while(registro.altura<=0){
+                    msj("Altura erronea",WHITE,RED,29,TEXT_LEFT);
                     cls();
-                    msj("Altura erronea",WHITE,RED,130,TEXT_LEFT);
-                    gotoxy(1,5);
-                    cout << "Nueva altura:\t";
+                    title("NUEVO USUARIO");
+                    locate(1,5);cout << "Nueva altura:\t";
                     cin >> registro.altura;
         }
     cout << "Peso:\t";
@@ -84,8 +89,9 @@ Usuario cargarUsuario(){
         while(registro.peso<=0){
                     cls();
                     msj("Peso erroneo",WHITE,RED,130,TEXT_LEFT);
-                    gotoxy(1,5);
-                    cout << "Nuevo peso:\t";
+                    cls();
+                    title("NUEVO USUARIO");
+                    locate(1,5);cout << "Nuevo peso:\t";
                     cin >> registro.peso;
         }
     cout << "Perfil de actividad:\t";
@@ -115,15 +121,17 @@ Usuario cargarUsuario(){
     registro.estado = true;
 
     system("cls");
-    mostrarReg(registro);
-    system("pause");
+    title("NUEVO USUARIO");
+    locate(1,2);mostrarReg(registro);
+    locate(1,29);system("pause");
     system("cls");
 
     return registro;
 }
 
 void guardarUsuario(){
-
+    cls();
+    title("NUEVO USUARIO");
     FILE *p;
     bool chequeo;
     Usuario registro;
@@ -138,12 +146,11 @@ void guardarUsuario(){
     chequeo = fwrite(&registro, sizeof(Usuario),1,p);
     if(chequeo==1)
     {
-        cls();
+
         msj("Carga exitosa",WHITE,GREEN,130,TEXT_LEFT);
-        gotoxy(1,5);
         fclose(p);
         system("pause");
-        system("cls");
+        cls();
         return;
     }
     else
@@ -151,12 +158,12 @@ void guardarUsuario(){
         cout << "El registro no pudo guardarse \n\n";
         fclose(p);
         system("pause");
-        system("cls");
+        cls();
         return;
     }
 }
 
-void modificarUsuario(){
+void modificarUsuario(){///PROBLEMA CON ESTA FUNCION: SE CUELGA AL SALIR! ENVIA LOS DOS CARTELES PERO GUARDA
 
     FILE *p;
     int posicion;
@@ -164,49 +171,65 @@ void modificarUsuario(){
     bool guardo;
     int idUsuario;
 
+    cls();
+    title("MODIFICAR USUARIO");
+
     p = fopen(FILE_USUARIOS,"rb+");
-    if(p==NULL)
-    {
+    if(p==NULL){
         cout << "Error al abrir el archivo \n";
         return;
     }
 
-    cout << "Ingrese el ID:\t";
+    locate(1,2);cout << "Ingrese el ID:\t";
     cin >> idUsuario;
 
     posicion = buscarID(idUsuario);
-    if(posicion<0)
-    {
-        cout << "Modificacion fallida\n";
+    if(posicion<0){
+        msj("Modificacion fallida",WHITE,RED,130,TEXT_LEFT);;
         fclose(p);
-        system("pause");
-        system("cls");
         return;
     }
     regAux = leerUsuario(posicion);
-    cout << "Nuevo peso:\t";
+    locate(1,3);cout << "Nuevo peso:\t";
     cin >> regAux.peso;
+    while(regAux.peso<=0){
+                    cls();
+                    msj("Peso erroneo",WHITE,RED,130,TEXT_LEFT);
+                    cls();
+                    title("MODIFICAR USUARIO");
+                    locate(1,2);cout << "Nuevo peso:\t";
+                    cin >> regAux.peso;
+        }
     cout << "Nuevo perfil de actividad:\t";
     cin >> regAux.perfAct;
+        while(!(regAux.perfAct == 'A' || regAux.perfAct == 'a'
+                    || regAux.perfAct == 'B' || regAux.perfAct == 'b'
+                    || regAux.perfAct == 'C' || regAux.perfAct == 'c') ){
+                        msj("Perfil erroneo",WHITE,RED,130,TEXT_LEFT);
+
+                        cls();
+                        title("MODIFICAR USUARIO");
+
+                        fflush(stdin);
+                        locate(1,2);cout << "Nuevo perfil de actividad:\t";
+                        cin >>regAux.perfAct;
+            }
+
     cout << "¿Apto medico?\t";
     cin >> regAux.aptoMedico;
 
     fseek(p,sizeof(Usuario)*posicion,SEEK_SET);
     guardo = fwrite(&regAux,sizeof(Usuario),1,p);
-    if(guardo==1)
-    {
-        cout << "Modificacion exitosa\n";
+    cout<<"--------- "<<guardo;
+    getch();
+    if(guardo==1){
+        msj("Carga exitosa",WHITE,GREEN,130,TEXT_LEFT);
         fclose(p);
-        system("pause");
-        system("cls");
         return;
     }
-    else
-    {
-        cout << "Modificacion fallida\n";
+    else if(guardo!=1){
+        msj("Modificacion fallida",WHITE,RED,130,TEXT_LEFT);
         fclose(p);
-        system("pause");
-        system("cls");
         return;
     }
 }
@@ -274,7 +297,7 @@ void listarUsuarios(){
         cout << "Error al abrir el archivo \n";
         return;
     }
-
+    title("LISTAR USUARIOS",BLACK,CYAN);
     while(fread(&reg,sizeof(Usuario),1,p)==1)
     {
             cout<<"\n\nID: "<<reg.id<<endl;
@@ -309,7 +332,8 @@ void listarId(){
         p = fopen(FILE_USUARIOS,"rb");
         if(p==NULL)
         {
-            cout << "Error al abrir el archivo\n";
+            msj("Error al abrir el archivo",WHITE,RED,29,TEXT_LEFT);
+            getch();
             return;
         }
         fseek(p,sizeof(Usuario)*user,SEEK_SET);
@@ -319,11 +343,11 @@ void listarId(){
         system("PAUSE");
     }
     else if(user==-2){
-        cout<<"ID inexistente\n";
+        msj("ID Inexistente",WHITE,RED,29,TEXT_LEFT);
         system("PAUSE");
     }else{
-        cout << "Error al abrir el archivo \n";
-        system("PAUSE");
+        msj("Error al abrir el archivo",WHITE,RED,29,TEXT_LEFT);
+        getch();
         }
 }
 
