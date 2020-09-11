@@ -8,34 +8,39 @@
 
 1599097509 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.h
 
-1599596803 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
+1599784056 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
 	<ctime>
+	<string.h>
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"
 
-1599595955 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
+1599785313 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
 	"fechas.h"
 
-1599596058 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
+1599781156 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
 	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"
 
 1599501875 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.h
 
-1599596055 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
+1599784425 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
 	<ctime>
+	<string.h>
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"

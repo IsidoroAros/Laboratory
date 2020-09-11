@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <stdlib.h>
 #include <ctime>
+#include <string.h>
 #include "funcionesTP.h"
 #include "menus.h"
 #include "fechas.h"
@@ -11,21 +12,32 @@ using namespace std;
 
 Usuario cargarUsuario(){
 
-    int dia,mes,anio;
+    int dia,mes,anio, retornoId;
     Usuario registro;
-    char apto;
+    char apto, nombre[50], apellido[50];
 
     cout << "Ingrese ID:\t";
     cin >> registro.id;
-    while(buscarID(registro.id)!=-2){
-        cout << "ID ya registrado, ingrese otro ID:\t";
+    while(buscarID(registro.id)!=-2 || (registro.id<0 || registro.id>9999)){
+        cout << "ID erroneo, ingrese otro ID:\t";
         cin >> registro.id;
-    } /// falta validar un id mayor que 0 y menor a 9999
+    } /// validacion id
+
     cin.ignore();
     cout << "Nombre:\t";
-    cin.getline(registro.nombres,50,'\n');
+    cin.getline(nombre,50,'\n');
+        while(validarNombresApellidos(nombre,50)==false){
+                cout << "Nombre incorrecto, vuelva a ingresar:\t";
+                cin.getline(nombre,50,'\n');
+        } /// validacion nombre
     cout << "Apellido:\t";
-    cin.getline(registro.apellidos,50,'\n');
+    cin.getline(apellido,50,'\n');
+
+        while(validarNombresApellidos(apellido,50)==false){
+                cout << "Apellido incorrecto, vuelva a ingresar:\t";
+                cin.getline(apellido,50,'\n');
+        } /// validacion apellido
+
     cout << "Ingrese fecha de nacimiento:\t";
     cin >> dia >> mes >> anio;
 
@@ -36,7 +48,7 @@ Usuario cargarUsuario(){
         cin >> mes;
         cin >> anio;
 
-    }
+    } /// validacion fecha
     registro.fecha.dia = dia;
     registro.fecha.mes = mes;
     registro.fecha.anio = anio;
@@ -47,6 +59,12 @@ Usuario cargarUsuario(){
     cin >> registro.peso;
     cout << "Perfil de actividad:\t";
     cin >> registro.perfAct;
+        while(registro.perfAct != 'a' || registro.perfAct != 'A'|| registro.perfAct != 'b'|| registro.perfAct != 'B'
+              || registro.perfAct != 'c'|| registro.perfAct != 'C'){
+                fflush(stdin);
+            cout << "INCORRECTO, perfil de actividad:\t";
+            cin >> apto;
+        }
     cout << "¿Tiene apto medico?\t";
     cin >> apto;
         while(apto != 'S' || apto != 's' || apto != 'N' || apto != 'n'){
@@ -147,6 +165,15 @@ void modificarUsuario(){
     }
 }
 
+bool rangoId(int id){
+
+    if(id<=0 || id >= 9999){
+    return false;
+    }else{
+    return true;
+    }
+}
+
 int buscarID(int id){
 
     int contador=0;
@@ -154,15 +181,13 @@ int buscarID(int id){
     FILE *p;
 
     p = fopen("usuarios.dat","rb");
-    if(p==NULL)
-    {
+
+    if(p==NULL){
         return -1;///codigo de error de que no halló el archivo.
     }
 
-    while(fread(&reg, sizeof(Usuario),1, p)==1)
-    {
-        if(reg.id == id)
-        {
+    while(fread(&reg, sizeof(Usuario),1, p)==1){
+        if(reg.id == id){
             fclose(p);
             return contador;
         }
@@ -319,3 +344,21 @@ void eliminarUsuario(int posicion){
 
 }
 
+bool validarNombresApellidos(char *nombres, int tam){
+
+    int cadena = strlen(nombres), contEspacios=0;
+    bool valorFinal = true;
+
+    for(int i=0; i <= cadena; i++){
+        if(nombres[i]==' '){
+            contEspacios++;
+        }
+        if(isdigit(nombres[i])==true){
+            return false;
+        }
+    }
+    if(contEspacios>=2){
+        return false;
+    }
+    return valorFinal;
+}

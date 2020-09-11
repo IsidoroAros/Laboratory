@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <stdlib.h>
 #include <ctime>
+#include <string.h>
 #include "funcionesTP.h"
 #include "menus.h"
 #include "fechas.h"
@@ -13,7 +14,6 @@ void menu()
 
     while(true)
     {
-        system("cls");
         cout<<"1 - USUARIOS"<<endl;
         cout<<"2 - ENTRENAMIENTOS"<<endl;
         cout<<"3 - REPORTES"<<endl;
@@ -33,7 +33,6 @@ void menu()
         case 0:
             return;
         default:
-            cout << "OPCION INCORRECTA \n";
             break;
         }
     }
@@ -80,6 +79,9 @@ void menuUsuarios()
         case 0:
             return;
             break;
+		default:
+            break;
+
         }
     }
 }
