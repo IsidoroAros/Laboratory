@@ -17,34 +17,74 @@ using namespace rlutil;
 using namespace std;
 void ValidarVariable(char *numero,int);
 
+int contarRegistro();
+void vectorIdsUsuarios();
+void leerVector(int *vec, int cantidadRegistros);
+
 int main(){
 
-	/*CONSOLE_SCREEN_BUFFER_INFO csbi;
-    int columns, rows;
+	//menu();
+    void vectorIdsUsuarios();
 
-    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
-    columns = csbi.srWindow.Right - csbi.srWindow.Left + 1;
-    rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
-
-    printf("columns: %d\n", columns);
-    printf("rows: %d\n", rows); *//// para chequear el alto y ancho de consola
-	menu();
-   /* char numero [10];
-     cout<<" Nombre  :"  ;
-    cin.getline(numero,10);
-	ValidarVariable(numero,10);*/
 return 0;
 }
 
+int contarRegistro(){
 
-void ValidarVariable(char numero [], int tam){
-    int no_vacio = 0 , contador = 0;
-    no_vacio = strlen (numero);
-    while (no_vacio == 0){
-      cout<<"Campo vacio, ingrese un nombre  :"  ;
-        cin.getline(numero, tam);
-         no_vacio = strlen (numero);
-         }
-    { if (no_vacio != 0)cout<<"Campo completo ";
+    FILE *p;
+    int posiciones=0;
+    Usuario reg;
+
+    p = fopen("usuarios.dat", "rb");
+        if(p==NULL){
+            cout << "Error de archivo";
+            return -1;
+        }
+    while(fread(&reg,sizeof(Usuario),1,p)==1){
+        posiciones++;
+    }
+    fclose(p);
+    return posiciones;
 }
+
+void vectorIdsUsuarios(){
+
+    FILE *p;
+    Usuario registro;
+    int fila_pos, cant_reg, i=0;
+    int *idsUsuarios;
+
+    cant_reg = contarRegistro();
+
+    p = fopen("usuarios.dat", "rb");
+        if(p==NULL){
+            cout << "Error de archivo";
+            return;
+        }
+
+    idsUsuarios =(int*) malloc(cant_reg*sizeof(int));
+        if(idsUsuarios==NULL){
+            cout << "No hay memoria disponible\n";
+            return;
+        }
+        while(fread(&registro,sizeof(Usuario),1,p)==1){
+            i++;
+            idsUsuarios[i] = registro.id;
+            cout << "Id numero: " << i+1 << registro.id << endl;
+        }
+        fclose(p);
+        free(idsUsuarios);
+
+        leerVector(idsUsuarios, cant_reg);
+
+    return;
 }
+
+void leerVector(int *vec, int cantidadRegistros){
+
+    for(int i=0;i<cantidadRegistros;i++){
+        cout << "user: " << i+1 << " id: " << vec[i] << endl;
+    }
+    return;
+}
+
