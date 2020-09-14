@@ -423,7 +423,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1600100345 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.cpp
+1600110505 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -455,7 +455,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600098650 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\main.cpp
+1600100366 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>

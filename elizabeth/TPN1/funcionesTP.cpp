@@ -22,7 +22,7 @@ Usuario cargarUsuario(){
 
     int dia,mes,anio;
     Usuario registro;
-    char perf, nombre[50], apellido[50];
+    char perf, nombre[50], apellido[50], apto;
     locate(1,2);cout << "Ingrese ID:\t";
     cin >> registro.id;
     while(buscarID(registro.id)!=-2 || (registro.id<0 || registro.id>9999)){
@@ -109,16 +109,16 @@ Usuario cargarUsuario(){
         }/// validacion perfil de actividad
 
         registro.perfAct=perf;
-    /*cout << "¿Tiene apto medico?\t";
-    cin >> apto;
-        while(apto != 'S' || apto != 's' || apto != 'N' || apto != 'n'){
+    cout << "¿Tiene apto medico?\t";
+    cin >>  apto;
+        while(!(apto == 'S' || apto == 's') && !( apto == 'N' || apto == 'n')){
                 fflush(stdin);
                     cls();
                     msj("Apto erroneo",WHITE,RED,130,TEXT_LEFT);
                     gotoxy(1,5);
             cout << "Tiene apto medico?\t";
             cin >> apto;
-        }*//// validacion apto medico
+        }//// validacion apto medico
     registro.estado = true;
 
     system("cls");
@@ -429,15 +429,19 @@ void eliminarUsuario(){
 
 bool validarNombresApellidos(char *nombres, int tam){
 
-    int  cadena = 0,contEspacios=0;
+    int  cadena = 0, contEspacios=0;
      cadena = strlen(nombres);
     bool valorFinal = true;
 
      while (cadena == 0){
-      cout<<" Dato faltante, ingrese  : "  ;
+         cls();
+        msj("Campo vacio",WHITE,RED,130,TEXT_LEFT);
+        gotoxy(1,5);
+        title("NUEVO USUARIO");
+        locate(1,5);cout << "Nombre : ";
         cin.getline(nombres, tam);
-         cadena = strlen (nombres);
-         }
+         cadena = strlen (nombres);}
+
 
     for(int i=0; i <= cadena; i++){
         if(nombres[i]==' '){
