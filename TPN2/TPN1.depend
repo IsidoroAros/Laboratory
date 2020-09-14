@@ -143,3 +143,65 @@
 	"fechas.h"
 	"rutinas.h"
 
+1599843927 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599843927 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\funcionestp.h
+	"fechas.h"
+
+1599843927 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\fechas.h
+
+1599843927 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\menus.h
+
+1599843927 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599843927 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599843927 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599939709 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\rutinas.h
+
+1599843927 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\tpn2\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+

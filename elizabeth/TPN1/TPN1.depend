@@ -1,0 +1,490 @@
+# depslib dependency file v1.0
+1599094593 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.cpp
+	<iostream>
+
+1599097480 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\main.cpp
+	<iostream>
+	"funcionesTP.h"
+
+1599097509 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\tpn1\funcionestp.h
+
+1599855330 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599798289 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\funcionestp.h
+	"fechas.h"
+
+1599853041 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599798289 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.h
+
+1599854002 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599864271 source:c:\users\daveq\documents\github\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599790883 c:\users\daveq\documents\github\laboratory\tpn1\funcionestp.h
+	"fechas.h"
+
+1599843931 c:\users\daveq\documents\github\laboratory\tpn1\menus.h
+
+1599856319 source:c:\users\daveq\documents\github\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599861842 source:c:\users\daveq\documents\github\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599798879 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599594677 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\fechas.h
+
+1599612996 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599788385 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.h
+	"fechas.h"
+
+1599612996 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\fechas.h
+
+1599792774 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.h
+
+1599786438 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599793879 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599792776 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+
+1599793918 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\rutinas.h
+
+1599796149 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\tpn1\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599843549 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599799451 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rutinas.h
+	"fechas.h"
+
+1599852970 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\ui.h
+
+1599494785 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1599852978 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\tpn1\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1599843931 source:c:\users\daveq\documents\github\laboratory\tpn1\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599843931 c:\users\daveq\documents\github\laboratory\tpn1\rutinas.h
+	"fechas.h"
+
+1599598064 c:\users\daveq\documents\github\laboratory\tpn1\fechas.h
+
+1599855928 c:\users\daveq\documents\github\laboratory\tpn1\ui.h
+
+1599843931 c:\users\daveq\documents\github\laboratory\tpn1\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1599843931 source:c:\users\daveq\documents\github\laboratory\tpn1\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1599862109 source:c:\users\daveq\documents\github\laboratory\tpn1\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1599843931 source:c:\users\daveq\desktop\tpn1\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599843931 c:\users\daveq\desktop\tpn1\rutinas.h
+	"fechas.h"
+
+1599598064 c:\users\daveq\desktop\tpn1\fechas.h
+
+1599790883 c:\users\daveq\desktop\tpn1\funcionestp.h
+	"fechas.h"
+
+1599843931 c:\users\daveq\desktop\tpn1\menus.h
+
+1600024083 c:\users\daveq\desktop\tpn1\ui.h
+
+1600024083 c:\users\daveq\desktop\tpn1\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600024498 source:c:\users\daveq\desktop\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600024497 source:c:\users\daveq\desktop\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1599843931 source:c:\users\daveq\desktop\tpn1\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1600024083 source:c:\users\daveq\desktop\tpn1\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1600024758 source:c:\users\daveq\desktop\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.h
+	"fechas.h"
+
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\fechas.h
+
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.h
+	"fechas.h"
+
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.h
+
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\ui.h
+
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600100345 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600098650 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"rutinas.h"
+
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
