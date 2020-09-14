@@ -119,6 +119,10 @@ Usuario cargarUsuario(){
             cout << "Tiene apto medico?\t";
             cin >> apto;
         }//// validacion apto medico
+         if (apto == 'S' || apto == 's'){
+        registro.aptoMedico = 1;}
+        else { if (apto == 'N' || apto == 'n'){
+        registro.aptoMedico = 0;}}
     registro.estado = true;
 
     system("cls");
@@ -361,7 +365,11 @@ void mostrarReg(Usuario reg){
     cout<<"Altura: "<<reg.altura<<endl;
     cout<<"Peso: "<<reg.peso<<endl;
     cout<<"Perfil: "<<reg.perfAct<<endl;
-    cout<<"Apto: "<<reg.aptoMedico<<endl;
+    cout<<"Apto: ";
+     if (reg.aptoMedico == 1) {
+         cout<<"SI"   <<endl;}
+    else{ if (reg.aptoMedico == 0) {
+         cout<<"NO"   <<endl;}}
     cout<<"Estado: "<<reg.estado<<endl;
     cout<<endl;
     }else{
