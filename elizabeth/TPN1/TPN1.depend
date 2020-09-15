@@ -508,7 +508,7 @@
 
 1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\fechas.h
 
-1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\funcionestp.h
+1600138135 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\funcionestp.h
 	"fechas.h"
 
 1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\menus.h
@@ -529,7 +529,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1600110962 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\funcionestp.cpp
+1600139365 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -653,6 +653,22 @@
 	"rlutil.h"
 
 1600122506 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\funcionestp.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"funcionesTP.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600138221 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
