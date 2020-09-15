@@ -22,8 +22,8 @@ void leerVector(int *vec, int cantidadRegistros);
 
 int main(){
 
-	//menu();
-    vectorIdsUsuarios();
+	menu();
+    ///vectorIdsUsuarios();
 
 return 0;
 }
@@ -69,8 +69,8 @@ void vectorIdsUsuarios(){
         }
         while(fread(&registro,sizeof (Usuario),1,p)==1){
             idsUsuarios[i] = registro.id;
-           // cout << "Id numero: " << i+1 <<endl<< registro.id << endl;
             i++;
+
         }
         fclose(p);
         leerVector(idsUsuarios, cant_reg);
