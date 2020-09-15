@@ -382,7 +382,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\fechas.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\fechas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -397,19 +397,19 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.h
 	"fechas.h"
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\fechas.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\fechas.h
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.h
 	"fechas.h"
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.h
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\ui.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\ui.h
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rlutil.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -423,7 +423,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1600122506 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.cpp
+1600110505 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -439,7 +439,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -455,7 +455,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600127656 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\main.cpp
+1600100366 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -471,7 +471,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -482,13 +482,13 @@
 	"fechas.h"
 	"rutinas.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\ui.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\ui.cpp
 	<iostream>
 	<cstring>
 	"ui.h"
 	"rlutil.h"
 
-1600110962 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\fechas.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\fechas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -503,19 +503,19 @@
 	"ui.h"
 	"rlutil.h"
 
-1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\rutinas.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\rutinas.h
 	"fechas.h"
 
-1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\fechas.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\fechas.h
 
-1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\funcionestp.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\funcionestp.h
 	"fechas.h"
 
-1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\menus.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\menus.h
 
-1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\ui.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\ui.h
 
-1600110962 c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\rlutil.h
+1600040098 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -529,7 +529,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1600110962 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\funcionestp.cpp
+1600110505 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -545,7 +545,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600110962 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\menus.cpp
+1600100366 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -561,65 +561,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600110962 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\rutinas.cpp
-	<iostream>
-	<cstdio>
-	<stdlib.h>
-	<ctime>
-	<string.h>
-	"funcionesTP.h"
-	"menus.h"
-	"fechas.h"
-	"rutinas.h"
-
-1600110962 source:c:\users\isi97\desktop\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\elizabeth\tpn1\ui.cpp
-	<iostream>
-	<cstring>
-	"ui.h"
-	"rlutil.h"
-
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\fechas.cpp
-	<iostream>
-	<cstdio>
-	<stdlib.h>
-	<ctime>
-	<string.h>
-	<cctype>
-	<algorithm>
-	"rutinas.h"
-	"funcionesTP.h"
-	"menus.h"
-	"fechas.h"
-	"ui.h"
-	"rlutil.h"
-
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\rutinas.h
-	"fechas.h"
-
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\fechas.h
-
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\funcionestp.h
-	"fechas.h"
-
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\menus.h
-
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\ui.h
-
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\rlutil.h
-	<iostream>
-	<string>
-	<cstdio>
-	<stdio.h>
-	<string.h>
-	<windows.h>
-	<conio.h>
-	<termios.h>
-	<unistd.h>
-	<sys/ioctl.h>
-	<sys/types.h>
-	<sys/time.h>
-
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\menus.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\menus.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -635,7 +577,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\rutinas.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\rutinas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -646,25 +588,9 @@
 	"fechas.h"
 	"rutinas.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\ui.cpp
+1600040098 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\caeli1010\tpn1\ui.cpp
 	<iostream>
 	<cstring>
-	"ui.h"
-	"rlutil.h"
-
-1600122506 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\laboratory\elizabeth\tpn1\funcionestp.cpp
-	<iostream>
-	<cstdio>
-	<stdlib.h>
-	<ctime>
-	<string.h>
-	<cstring>
-	<cctype>
-	<algorithm>
-	"rutinas.h"
-	"funcionesTP.h"
-	"menus.h"
-	"fechas.h"
 	"ui.h"
 	"rlutil.h"
 

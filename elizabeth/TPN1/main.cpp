@@ -15,7 +15,6 @@
 
 using namespace rlutil;
 using namespace std;
-void ValidarVariable(char *numero,int);
 
 int contarRegistro();
 void vectorIdsUsuarios();
@@ -24,7 +23,7 @@ void leerVector(int *vec, int cantidadRegistros);
 int main(){
 
 	//menu();
-    void vectorIdsUsuarios();
+    vectorIdsUsuarios();
 
 return 0;
 }
@@ -38,13 +37,14 @@ int contarRegistro(){
     p = fopen("usuarios.dat", "rb");
         if(p==NULL){
             cout << "Error de archivo";
-            return -1;
+            return - 1 ;
         }
-    while(fread(&reg,sizeof(Usuario),1,p)==1){
+    while(fread(&reg,sizeof (Usuario),1,p)==1){
         posiciones++;
     }
+      // cout<< posiciones;
     fclose(p);
-    return posiciones;
+   return posiciones;
 }
 
 void vectorIdsUsuarios(){
@@ -54,7 +54,7 @@ void vectorIdsUsuarios(){
     int fila_pos, cant_reg, i=0;
     int *idsUsuarios;
 
-    cant_reg = contarRegistro();
+   cant_reg = contarRegistro();
 
     p = fopen("usuarios.dat", "rb");
         if(p==NULL){
@@ -67,17 +67,14 @@ void vectorIdsUsuarios(){
             cout << "No hay memoria disponible\n";
             return;
         }
-        while(fread(&registro,sizeof(Usuario),1,p)==1){
-            i++;
+        while(fread(&registro,sizeof (Usuario),1,p)==1){
             idsUsuarios[i] = registro.id;
-            cout << "Id numero: " << i+1 << registro.id << endl;
+           // cout << "Id numero: " << i+1 <<endl<< registro.id << endl;
+            i++;
         }
         fclose(p);
-        free(idsUsuarios);
-
         leerVector(idsUsuarios, cant_reg);
-
-    return;
+        free (idsUsuarios);
 }
 
 void leerVector(int *vec, int cantidadRegistros){
