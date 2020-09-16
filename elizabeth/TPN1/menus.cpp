@@ -102,7 +102,7 @@ void menuRutinas(){
     cout<<"2) MODIFICAR ENTRENAMIENTO"<<endl;
     cout<<"3) LISTAR ENTRENAMIENTO POR ID"<<endl;
     cout<<"4) LISTAR ENTRENAMIENTOS POR IDUSUARIO"<<endl;
-    cout<<"4) LISTAR TODOS LOS ENTRENAMIENTOS"<<endl;
+    cout<<"5) LISTAR TODOS LOS ENTRENAMIENTOS"<<endl;
     cout<<"--------------------------------"<<endl;
     cout<<"0) VOLVER AL MENÚ PRINCIPAL"<<endl;
     int opcion;
@@ -119,6 +119,7 @@ void menuRutinas(){
     case 3:
         break;
     case 4:
+        listarRutinas();
         break;
     case 5:
         break;

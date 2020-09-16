@@ -303,7 +303,7 @@ Usuario leerUsuario(int pos){
         return reg;
     }
     if(pos == -1){
-        cout << "Posicion incorrecta\n";
+        cout << "ID inexistente \n";
 
         reg.id = 0;
         system("pause");

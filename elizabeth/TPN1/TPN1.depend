@@ -397,12 +397,13 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.h
+1600222284 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.h
 	"fechas.h"
+	"funcionesTP.h"
 
 1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\fechas.h
 
-1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.h
+1600141078 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.h
 	"fechas.h"
 
 1600116584 c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.h
@@ -423,7 +424,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1600122506 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.cpp
+1600222086 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\funcionestp.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -439,7 +440,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.cpp
+1600217961 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\menus.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -455,7 +456,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600127656 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\main.cpp
+1600141078 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\main.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -471,16 +472,21 @@
 	"ui.h"
 	"rlutil.h"
 
-1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.cpp
+1600223021 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\rutinas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
 	<ctime>
 	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
 	"funcionesTP.h"
 	"menus.h"
 	"fechas.h"
-	"rutinas.h"
+	"ui.h"
+	"rlutil.h"
 
 1600116584 source:c:\users\usuario\desktop\lab comp 1\lab comp2\laboratory\elizabeth\tpn1\ui.cpp
 	<iostream>
