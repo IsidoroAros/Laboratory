@@ -15,7 +15,6 @@
 
 using namespace rlutil;
 using namespace std;
-const char *FILE_USUARIOS = "archivos/usuarios.dat";
 void nuevaRutina()
 {
 

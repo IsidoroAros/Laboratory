@@ -516,7 +516,7 @@ void vectorIdsUsuarios(){
 
     FILE *p;
     Usuario registro;
-    int fila_pos, cant_reg, i=0;
+    int  cant_reg, i=0;
     int *idsUsuarios;
 
    cant_reg = contarRegistro();
