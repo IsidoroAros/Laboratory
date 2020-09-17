@@ -22,11 +22,12 @@ Usuario cargarUsuario(){
 
     int dia,mes,anio;
     Usuario registro;
-    char perf, nombre[50], apellido[50];
+    char perf, nombre[50], apellido[50], apto;
+
     locate(1,2);cout << "Ingrese ID:\t";
     cin >> registro.id;
     while(buscarID(registro.id)!=-2 || (registro.id<0 || registro.id>9999)){
-        msj("ID erroneo",WHITE,RED,29,TEXT_LEFT);
+        msj("ID invalido o preexistente",WHITE,RED,29,TEXT_LEFT);
 
         cls();
         title("NUEVO USUARIO");
@@ -109,17 +110,25 @@ Usuario cargarUsuario(){
         }/// validacion perfil de actividad
 
         registro.perfAct=perf;
-    /*cout << "¿Tiene apto medico?\t";
-    cin >> apto;
-        while(apto != 'S' || apto != 's' || apto != 'N' || apto != 'n'){
+    cout << "¿Tiene apto medico?\t";
+    cin >>  apto;
+        while(!(apto == 'S' || apto == 's') && !( apto == 'N' || apto == 'n')){
                 fflush(stdin);
                     cls();
                     msj("Apto erroneo",WHITE,RED,130,TEXT_LEFT);
                     gotoxy(1,5);
             cout << "Tiene apto medico?\t";
             cin >> apto;
-        }*//// validacion apto medico
-    registro.estado = true;
+        }//// validacion apto medico
+         if (apto == 'S' || apto == 's'){
+
+        registro.aptoMedico = 1;
+        }else if (apto == 'N' || apto == 'n'){
+
+        registro.aptoMedico = 0;
+            }
+
+        registro.estado = true;
 
     system("cls");
     title("NUEVO USUARIO");
@@ -128,7 +137,8 @@ Usuario cargarUsuario(){
     system("cls");
 
     return registro;
-}
+        }
+
 
 void guardarUsuario(){
     cls();
@@ -170,6 +180,7 @@ void modificarUsuario(){///PROBLEMA CON ESTA FUNCION: SE CUELGA AL SALIR! ENVIA 
     int posicion;
     Usuario regAux;
     bool guardo;
+    char apto;
     int idUsuario;
 
     cls();
@@ -216,23 +227,40 @@ void modificarUsuario(){///PROBLEMA CON ESTA FUNCION: SE CUELGA AL SALIR! ENVIA 
                         cin >>regAux.perfAct;
             }
 
-    cout << "¿Apto medico?\t";
-    cin >> regAux.aptoMedico;
+            cout << "Tiene apto medico?:\t";
+            cin >> apto;
+
+        while(!(apto == 'S' || apto == 's') && !( apto == 'N' || apto == 'n')){
+                fflush(stdin);
+                    cls();
+                    msj("Apto erroneo",WHITE,RED,130,TEXT_LEFT);
+                    gotoxy(1,5);
+            cout << "Tiene apto medico?\t";
+            cin >> apto;
+        }//// validacion apto medico
+         if (apto == 'S' || apto == 's'){
+
+        regAux.aptoMedico = 1;
+        }else if (apto == 'N' || apto == 'n'){
+
+        regAux.aptoMedico = 0;
+        }
 
     fseek(p,sizeof(Usuario)*posicion,SEEK_SET);
     guardo = fwrite(&regAux,sizeof(Usuario),1,p);
-    cout<<"--------- "<<guardo;
+    //cout<<"--------- "<<guardo<<"--------- ";
     getch();
-    if(guardo==1){
+    if(guardo!=1){
+        msj("Modificacion fallida",WHITE,RED,130,TEXT_LEFT);
+        fclose(p);
+        return;
+    }else{
         msj("Carga exitosa",WHITE,GREEN,130,TEXT_LEFT);
         fclose(p);
         return;
     }
-    else if(guardo!=1){
-        msj("Modificacion fallida",WHITE,RED,130,TEXT_LEFT);
-        fclose(p);
-        return;
-    }
+
+
 }
 
 bool rangoId(int id){
@@ -275,7 +303,7 @@ Usuario leerUsuario(int pos){
         return reg;
     }
     if(pos == -1){
-        cout << "Posicion incorrecta\n";
+        cout << "ID inexistente \n";
 
         reg.id = 0;
         system("pause");
@@ -308,7 +336,11 @@ void listarUsuarios(){
             cout<<"Altura: "<<reg.altura<<endl;
             cout<<"Peso: "<<reg.peso<<endl;
             cout<<"Perfil: "<<reg.perfAct<<endl;
-            cout<<"Apto: "<<reg.aptoMedico<<endl;
+            cout<<"Apto: ";
+            if (reg.aptoMedico == 1) {
+            cout<<"SI"   <<endl;}
+            else{ if (reg.aptoMedico == 0) {
+            cout<<"NO"   <<endl;}}
             if(reg.estado==true){
                 cout<<"Estado: Activo"<<endl;
             }else{cout<<"Estado: Inactivo"<<endl;}
@@ -361,7 +393,11 @@ void mostrarReg(Usuario reg){
     cout<<"Altura: "<<reg.altura<<endl;
     cout<<"Peso: "<<reg.peso<<endl;
     cout<<"Perfil: "<<reg.perfAct<<endl;
-    cout<<"Apto: "<<reg.aptoMedico<<endl;
+    cout<<"Apto: ";
+     if (reg.aptoMedico == 1) {
+         cout<<"SI"   <<endl;}
+    else{ if (reg.aptoMedico == 0) {
+         cout<<"NO"   <<endl;}}
     cout<<"Estado: "<<reg.estado<<endl;
     cout<<endl;
     }else{
@@ -429,8 +465,19 @@ void eliminarUsuario(){
 
 bool validarNombresApellidos(char *nombres, int tam){
 
-    int cadena = strlen(nombres), contEspacios=0;
+    int  cadena = 0, contEspacios=0;
+     cadena = strlen(nombres);
     bool valorFinal = true;
+
+     while (cadena == 0){
+         cls();
+        msj("Campo vacio",WHITE,RED,130,TEXT_LEFT);
+        gotoxy(1,5);
+        title("NUEVO USUARIO");
+        locate(1,5);cout << "Nombre : ";
+        cin.getline(nombres, tam);
+         cadena = strlen (nombres);}
+
 
     for(int i=0; i <= cadena; i++){
         if(nombres[i]==' '){
@@ -444,4 +491,61 @@ bool validarNombresApellidos(char *nombres, int tam){
         return false;
     }
     return valorFinal;
+}
+
+int contarRegistro(){
+
+    FILE *p;
+    int posiciones=0;
+    Usuario reg;
+
+    p = fopen(FILE_USUARIOS, "rb");
+        if(p==NULL){
+            cout << "Error de archivo";
+            return - 1 ;
+        }
+    while(fread(&reg,sizeof (Usuario),1,p)==1){
+        posiciones++;
+    }
+      // cout<< posiciones;
+    fclose(p);
+   return posiciones;
+}
+
+void vectorIdsUsuarios(){
+
+    FILE *p;
+    Usuario registro;
+    int  cant_reg, i=0;
+    int *idsUsuarios;
+
+   cant_reg = contarRegistro();
+
+    p = fopen(FILE_USUARIOS, "rb");
+        if(p==NULL){
+            cout << "Error de archivo";
+            return;
+        }
+
+    idsUsuarios =(int*) malloc(cant_reg*sizeof(int));
+        if(idsUsuarios==NULL){
+            cout << "No hay memoria disponible\n";
+            return;
+        }
+        while(fread(&registro,sizeof (Usuario),1,p)==1){
+            idsUsuarios[i] = registro.id;
+            i++;
+
+        }
+        fclose(p);
+        leerVector(idsUsuarios, cant_reg);
+        free (idsUsuarios);
+}
+
+void leerVector(int *vec, int cantidadRegistros){
+
+    for(int i=0;i<cantidadRegistros;i++){
+        cout << "User: " << i+1 << " id: " << vec[i] << endl;
+    }
+    return;
 }

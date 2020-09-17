@@ -43,6 +43,10 @@ void eliminarUsuario(); /// Genera la baja lógica de un usuario mediante un ID
 
 bool validarNombresApellidos(char *nombres, int tam); /// Valida que una cadena de caracteres no esté vacía
 
+int contarRegistro(); /// cuenta cuantos registros hay en un archivo
 
+void vectorIdsUsuarios(); /// Mediante Malloc crea un vector con todos los ID's de los usuarios ---------> función reutilizable
+
+void leerVector(int *vec, int cantidadRegistros); /// Lee un vector de registros
 
 #endif // FUNCIONESTP_H_INCLUDED

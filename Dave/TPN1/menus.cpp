@@ -20,6 +20,7 @@ using namespace std;
 void menu(){
 
     while(true){
+        cls();
         title("MENU PRINCIPAL",BLACK,CYAN);
         gotoxy(1,3);
         cout<<"1 - USUARIOS"<<endl;
@@ -94,41 +95,43 @@ void menuUsuarios(){
 }
 
 void menuRutinas(){
-    system("cls");
-    title("ENTRENAMIENTOS",0,42);
-    gotoxy(1,3); /// El puntero arranca a partir de esta posicion
-    cout<<"--------------------------------"<<endl;
-    cout<<"1) NUEVO ENTRENAMIENTO"<<endl;
-    cout<<"2) MODIFICAR ENTRENAMIENTO"<<endl;
-    cout<<"3) LISTAR ENTRENAMIENTO POR ID"<<endl;
-    cout<<"4) LISTAR ENTRENAMIENTOS POR IDUSUARIO"<<endl;
-    cout<<"4) LISTAR TODOS LOS ENTRENAMIENTOS"<<endl;
-    cout<<"--------------------------------"<<endl;
-    cout<<"0) VOLVER AL MENÚ PRINCIPAL"<<endl;
-    int opcion;
-    cout<<"> ";
-    cin>> opcion;
-    system("cls");
-    switch(opcion)
-    {
-    case 1:
-        nuevaRutina();
-        break;
-    case 2:
-        break;
-    case 3:
-        break;
-    case 4:
-        break;
-    case 5:
-        break;
-    case 0:
-        return;
-        break;
-    default:
-        break;
-    }
-
+        int opcion;
+        do {
+        cls();
+        title("ENTRENAMIENTOS", 0, 42);
+        gotoxy(1, 3); /// El puntero arranca a partir de esta posicion
+        cout << "--------------------------------" << endl;
+        cout << "1) NUEVO ENTRENAMIENTO" << endl;
+        cout << "2) MODIFICAR ENTRENAMIENTO" << endl;
+        cout << "3) LISTAR ENTRENAMIENTO POR ID" << endl;
+        cout << "4) LISTAR ENTRENAMIENTOS POR IDUSUARIO" << endl;
+        cout << "5) LISTAR TODOS LOS ENTRENAMIENTOS" << endl;
+        cout << "--------------------------------" << endl;
+        cout << "0) VOLVER AL MENÚ PRINCIPAL" << endl;
+        
+        cout << "> ";
+        cin >> opcion;
+        system("cls");
+        switch (opcion)
+        {
+        case 1:
+            nuevaRutina();
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:listarRutinas();
+            break;
+        case 0:
+            return;
+            break;
+        default:
+            break;
+        }
+    } while (opcion != 0);
 }
 
 

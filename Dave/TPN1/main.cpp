@@ -15,21 +15,17 @@
 
 using namespace rlutil;
 using namespace std;
-
+/*
+int contarRegistro();
+void vectorIdsUsuarios();
+void leerVector(int *vec, int cantidadRegistros);
+*/
 int main(){
-
-	/*CONSOLE_SCREEN_BUFFER_INFO csbi;
-    int columns, rows;
-
-    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
-    columns = csbi.srWindow.Right - csbi.srWindow.Left + 1;
-    rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
-
-    printf("columns: %d\n", columns);
-    printf("rows: %d\n", rows); *//// para chequear el alto y ancho de consola
-	menu();
+ 
+    menu();
 
 return 0;
 }
+
 
 

@@ -2,7 +2,7 @@
 #define RUTINAS_H_INCLUDED
 
 #include "fechas.h"
-
+ #include "funcionesTP.h"
 struct Rutina{
     int id;
     int idUsuario;
@@ -15,5 +15,5 @@ struct Rutina{
  void nuevaRutina();
  Rutina cargarRutina();
  int crearId();
-
+void listarRutinas();
 #endif // RUTINAS_H_INCLUDED
