@@ -104,7 +104,7 @@ void menuRutinas(){
         cout << "1) NUEVO ENTRENAMIENTO" << endl;
         cout << "2) MODIFICAR ENTRENAMIENTO" << endl;
         cout << "3) LISTAR ENTRENAMIENTO POR ID" << endl;
-        cout << "4) LISTAR ENTRENAMIENTOS POR IDUSUARIO" << endl;
+        cout << "4) LISTAR ENTRENAMIENTOS POR ID USUARIO" << endl;
         cout << "5) LISTAR TODOS LOS ENTRENAMIENTOS" << endl;
         cout << "--------------------------------" << endl;
         cout << "0) VOLVER AL MENÚ PRINCIPAL" << endl;
@@ -112,12 +112,12 @@ void menuRutinas(){
         cout << "> ";
         cin >> opcion;
         system("cls");
-        switch (opcion)
-        {
+        switch (opcion){
         case 1:
             guardarRutina();
             break;
         case 2:
+            modificarEntrenamiento();
             break;
         case 3:
              listarRutinaXId();

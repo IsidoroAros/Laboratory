@@ -27,4 +27,8 @@ void mostrarRutina(Rutina reg); /// muesta una rutina recibida por parametro -->
 
 void listarRutinaXId(); /// Lista una rutina recibida por ID
 
+Rutina copiarEntrenamiento(int posicion); /// Copia el registro de una rutina en un registro auxiliar
+
+void modificarEntrenamiento(); /// Modifica un entrenamiento que recibe por ID de rutina
+
 #endif // RUTINAS_H_INCLUDED

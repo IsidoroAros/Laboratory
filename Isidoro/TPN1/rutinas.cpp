@@ -249,3 +249,90 @@ void listarRutinaXId(){
         }
 }
 
+Rutina copiarEntrenamiento(int posicion){
+
+    FILE *p;
+    Rutina registro;
+
+        p = fopen(FILE_RUTINAS,"rb+");
+            if(p==NULL){
+                cout << "Error al abrir el archivo \n";
+                registro.idUsuario = -1;
+                return registro;
+            }
+
+        fseek(p,posicion*sizeof(Rutina),SEEK_SET);
+        fread(&registro,sizeof(Rutina),1,p);
+        fclose(p);
+
+        return registro;
+
+}
+
+void modificarEntrenamiento(){
+
+    FILE *p;
+    int modRut, posicion;
+    Rutina regAux;
+
+
+    cls();
+    title("MODIFICAR ENTRENAMIENTO");
+
+        p = fopen(FILE_RUTINAS,"rb+");
+            if(p==NULL){
+                cout << "Error al abrir el archivo \n";
+                return;
+            } /// abro archivo
+        gotoxy(1,3);cout << "ID de rutina a modificar:\t";
+
+        cin >> modRut; /// Ingreso id de rutina a modificar
+
+       posicion = buscarIDRutina(modRut); /// busco su posicion
+
+       if(posicion < 0){
+            cls();
+            msj("ID inexistente",WHITE,RED,29,TEXT_LEFT);
+            fclose(p);
+            return;
+       } /// si es menor a 0 es porque el archivo o la rutina no existe
+
+        regAux = copiarEntrenamiento(posicion); /// Copio la rutina en el registro auxiliar
+
+        if(regAux.id == -1){ /// chequear después
+                msj("No se puede abrir archivo",WHITE,RED,29,TEXT_LEFT);
+                cls();
+                return;
+        }
+        cout << "Calorias quemadas:\t";
+        cin >> regAux.calorias;
+
+        while(regAux.calorias < 0){
+                     msj("Calorias negativas",WHITE,RED,29,TEXT_LEFT);
+                     cls();
+                     title("MODIFICAR ENTRENAMIENTO");
+                     fflush(stdin);
+                     gotoxy(1,3);cout << "Reingrese calorias:\t";
+                     cin >> regAux.calorias;
+            }
+
+        cout << "Tiempo:\t";
+        cin >> regAux.tiempo;
+
+            while(regAux.tiempo < 0){
+                     msj("Tiempo invalido",WHITE,RED,29,TEXT_LEFT);
+                     cls();
+                     title("MODIFICAR ENTRENAMIENTO");
+                     fflush(stdin);
+                     gotoxy(1,3);cout << "Reingrese tiempo:\t";
+                     cin >> regAux.tiempo;
+            }
+
+       fseek(p,posicion*sizeof(Rutina),SEEK_SET); /// paro el puntero en la posicion
+       fwrite(&regAux,sizeof(Rutina),1,p);
+       fclose(p);
+
+       return;
+
+} /// Esta guardando basura cuando se guarda el usuario
+

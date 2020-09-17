@@ -248,7 +248,6 @@ void modificarUsuario(){///PROBLEMA CON ESTA FUNCION: SE CUELGA AL SALIR! ENVIA 
 
     fseek(p,sizeof(Usuario)*posicion,SEEK_SET);
     guardo = fwrite(&regAux,sizeof(Usuario),1,p);
-    //cout<<"--------- "<<guardo<<"--------- ";
     getch();
     if(guardo!=1){
         msj("Modificacion fallida",WHITE,RED,130,TEXT_LEFT);
