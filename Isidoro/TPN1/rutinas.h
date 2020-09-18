@@ -23,12 +23,16 @@ void listarRutinas(); /// Muestra todas las rutinas
 
 int buscarIDRutina(int id); /// Busca y retorna la posicion de una rutina en el archivo
 
-void mostrarRutina(Rutina reg); /// muesta una rutina recibida por parametro --> ListarRutinaXID
+void mostrarRutina(Rutina reg); /// muesta una rutina recibida por parametro --> listarRutinaXID y listarRutinaXIdUsuario()
 
 void listarRutinaXId(); /// Lista una rutina recibida por ID
 
 Rutina copiarEntrenamiento(int posicion); /// Copia el registro de una rutina en un registro auxiliar
 
 void modificarEntrenamiento(); /// Modifica un entrenamiento que recibe por ID de rutina
+
+int contarRutinas(); /// Cuenta cuantas rutinas hay en el archivo
+
+void listarRutinaXIdUsuario(); /// Lista todas las rutinas de un usuario que recibe por ID de usuario
 
 #endif // RUTINAS_H_INCLUDED

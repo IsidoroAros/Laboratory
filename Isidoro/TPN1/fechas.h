@@ -13,9 +13,11 @@ struct Fecha{
 
 ///------------------- FUNCIONES -------------------
 
-Fecha hoy();
-bool validarEdad(int  dia, int mes, int anio);
-bool validarFecha( int dia, int mes, int anio); /// Función que valida una fecha
+Fecha hoy(); /// Pone en un registro la fecha del dia de hoy
+
+bool validarEdad(int  dia, int mes, int anio); /// Valida que un usuario no sea menor de 13 años
+
+bool validarFecha( int dia, int mes, int anio); /// Función que valida una fecha no sea mayor a hoy
 
 
 

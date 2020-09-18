@@ -107,7 +107,7 @@ void menuRutinas(){
         cout << "4) LISTAR ENTRENAMIENTOS POR ID USUARIO" << endl;
         cout << "5) LISTAR TODOS LOS ENTRENAMIENTOS" << endl;
         cout << "--------------------------------" << endl;
-        cout << "0) VOLVER AL MENÚ PRINCIPAL" << endl;
+        cout << "0) VOLVER AL MENU PRINCIPAL" << endl;
 
         cout << "> ";
         cin >> opcion;
@@ -123,6 +123,7 @@ void menuRutinas(){
              listarRutinaXId();
             break;
         case 4:
+             listarRutinaXIdUsuario();
             break;
         case 5:
             listarRutinas();

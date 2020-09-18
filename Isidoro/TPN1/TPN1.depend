@@ -223,7 +223,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600110962 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\fechas.cpp
+1600403073 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\fechas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -238,7 +238,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600375578 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\rutinas.h
+1600398274 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\rutinas.h
 	"fechas.h"
 	"funcionesTP.h"
 
@@ -303,7 +303,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600372203 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\menus.cpp
+1600402767 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\menus.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>
@@ -319,7 +319,7 @@
 	"ui.h"
 	"rlutil.h"
 
-1600373694 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\rutinas.cpp
+1600403200 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\tpn1\rutinas.cpp
 	<iostream>
 	<cstdio>
 	<stdlib.h>

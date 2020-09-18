@@ -55,7 +55,7 @@ Rutina cargarRutina(){
 
     registro.id = crearId();
     title("NUEVA RUTINA");
-    cout <<"Ingrese ID Usuario : " ;
+    gotoxy(1,3);cout <<"Ingrese ID Usuario : " ;
     cin >> registro.idUsuario;
     while(buscarID(registro.idUsuario) == -2){
         msj("ID inexistente",WHITE,RED,29,TEXT_LEFT);
@@ -78,7 +78,7 @@ Rutina cargarRutina(){
 
      cout << "Ingrese fecha de la rutina:\t";
      cin >> dia >> mes >> anio;
-     while(validarEdad(dia, mes, anio)==false){
+     while(validarFecha(dia, mes, anio)==false){
          msj("Fecha invalida",WHITE,RED,29,TEXT_LEFT);
          cls();
          title("NUEVA RUTINA");
@@ -304,6 +304,7 @@ void modificarEntrenamiento(){
                 cls();
                 return;
         }
+
         cout << "Calorias quemadas:\t";
         cin >> regAux.calorias;
 
@@ -334,5 +335,73 @@ void modificarEntrenamiento(){
 
        return;
 
-} /// Esta guardando basura cuando se guarda el usuario
+}
+
+int contarRutinas(){
+
+    FILE *p;
+    int posiciones=0;
+    Rutina reg;
+
+    p = fopen(FILE_RUTINAS, "rb");
+        if(p==NULL){
+            cout << "Error de archivo";
+            return - 1 ;
+        }
+    while(fread(&reg,sizeof (Rutina),1,p)==1){
+        posiciones++;
+    }
+
+    fclose(p);
+   return posiciones;
+}
+
+void listarRutinaXIdUsuario(){
+
+    Rutina registro;
+    FILE *p;
+    Rutina *vecRutinas;
+    int idAux,cantReg;
+
+    idAux = crearId();
+
+    title("Listar entrenamientos por ID de usuario");
+    gotoxy(1,3);cout <<"Ingrese ID Usuario:\t";
+    cin >> idAux;
+
+            while(buscarID(idAux) == -2){
+                msj("ID inexistente",WHITE,RED,29,TEXT_LEFT);
+                cls();
+                title("NUEVA RUTINA");
+                gotoxy(1,3);cout << "Ingrese otro ID:\t";
+                fflush(stdin);
+                cin >> idAux;
+            } /// registra que exista el usuario, sino retorna -2
+
+    cantReg = contarRutinas(); /// buscamos la cantidad de registros que hay en el archivo de rutinas
+    vecRutinas = (Rutina *) malloc(cantReg*sizeof(Rutina)); /// reservar espacios de un vector para esa cantidad de registros
+        if(vecRutinas==NULL){
+                msj("No hay espacio en memoria",WHITE,RED,29,TEXT_LEFT);
+                cls();
+        }
+
+
+    p=fopen(FILE_RUTINAS,"rb+");
+        if(p==NULL){
+                cout << "Error al abrir el archivo \n";
+                return;
+        }
+
+        fread(vecRutinas,sizeof(Rutina),cantReg,p); /// en el vecRutinas cargo todos los reg
+        fclose(p);
+
+        for(int i=0;i<cantReg;i++){
+            if(vecRutinas[i].idUsuario == idAux){
+                mostrarRutina(vecRutinas[i]);
+            }
+        }
+        getch();
+        free(vecRutinas);
+        return;
+}
 

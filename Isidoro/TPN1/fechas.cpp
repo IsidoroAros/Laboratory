@@ -42,17 +42,41 @@ bool validarEdad(int dia, int mes, int anio){
 }
 
 bool validarFecha( int dia, int mes, int anio){
-
 //  Se han de recibir tres parámetros, todos ellos de tipo entero.
 //  Se devolverá un 0/false o un 1/true.
+
+    Fecha fechaDeHoy;
+
+
+    fechaDeHoy = hoy();
+
+ /*   if (fechaDeHoy.mes > mes){edad = fechaDeHoy.anio - anio;}
+    else if(fechaDeHoy.mes == mes){
+
+        if (fechaDeHoy.dia >= dia){edad = fechaDeHoy.anio - anio;}
+
+    } else{edad  = (fechaDeHoy.anio - 1) - anio;}
+
+       if(fechaDeHoy.dia < dia){
+            if(fechaDeHoy.mes <= mes){
+                if(fechaDeHoy.anio <= anio){
+                return false;
+                }
+            }
+        }else if(fechaDeHoy.mes > mes){
+                if(fechaDeHoy.anio <= anio){
+                    return false;
+                }
+        }else*/
+
+
 
     bool fec = 0;
 
     if( mes >= 1 && mes <= 12 )
     {
 
-        switch( mes )
-        {
+        switch( mes ){
 
         case 1:
         case 3:
@@ -61,37 +85,29 @@ bool validarFecha( int dia, int mes, int anio){
         case 8:
         case 10:
         case 12:
-            if( dia >= 1 && dia <= 31 )
-            {
+            if( dia >= 1 && dia <= 31 ){
                 fec = true;
             }
             break;
-
 
         case 4:
         case 6:
         case 9:
         case 11:
-            if( dia >= 1 && dia <= 30 )
-            {
+            if( dia >= 1 && dia <= 30 ){
                 fec = true;
             }
             break;
 
 
-        case 2:
-//Si el año es bisiesto +1 día.
-            if( ((anio%4 == 0)   &&   (anio%100 != 0)) ||   (anio%400 == 0) )
-            {
-                if( dia >= 1 && dia <= 29 )
-                {
+        case 2://Si el año es bisiesto +1 día.
+
+            if( ((anio%4 == 0)   &&   (anio%100 != 0)) ||   (anio%400 == 0) ){
+                if( dia >= 1 && dia <= 29 ){
                     fec = true;
                 }
-            }
-            else
-            {
-                if( dia >= 1 && dia <= 28 )
-                {
+            }else{
+                if( dia >= 1 && dia <= 28 ){
                     fec = true;
                 }
             }
@@ -100,6 +116,5 @@ bool validarFecha( int dia, int mes, int anio){
         }
 
     }
-
     return fec;
 }
