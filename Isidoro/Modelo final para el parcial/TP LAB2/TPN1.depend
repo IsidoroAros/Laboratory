@@ -658,3 +658,139 @@
 	"ui.h"
 	"rlutil.h"
 
+1600744418 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"modeloParcial.h"
+
+1600744853 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\rutinas.h
+	"fechas.h"
+	"usuarios.h"
+
+1600742332 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\fechas.h
+
+1600742332 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\usuarios.h
+	"fechas.h"
+
+1600744684 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\menus.h
+
+1600742332 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\ui.h
+
+1600742332 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600744384 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"modeloParcial.h"
+
+1600748064 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"modeloParcial.h"
+
+1600744842 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"modeloParcial.h"
+
+1600742332 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1600744418 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\usuarios.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"modeloParcial.h"
+
+1600747843 c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\modeloparcial.h
+
+1600748639 source:c:\users\isi97\onedrive\escritorio\isidoro\facultad\2do cuatrimestre 2020\laboratorio ii\laboratory\isidoro\modelo final para el parcial\tp lab2\modeloparcial.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"modeloParcial.h"
+

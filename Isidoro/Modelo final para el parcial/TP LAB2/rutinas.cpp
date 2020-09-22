@@ -12,6 +12,7 @@
 #include "fechas.h"
 #include "ui.h"
 #include "rlutil.h"
+#include "modeloParcial.h"
 
 using namespace rlutil;
 using namespace std;
@@ -168,7 +169,7 @@ void listarRutinas(){
     title("LISTAR RUTINAS",BLACK,CYAN);
     while(fread(&reg,sizeof(Rutina),1,p)==1)
     {
-            cout<<"\n\nID: "<<reg.id<<endl;
+            cout<<"\n\nID entrenamiento: "<<reg.id<<endl;
             cout<<"ID de Usuario : "<<reg.idUsuario<<endl;
             cout<<"Fecha :"<<reg.fechaRutina.dia<<" / " <<reg.fechaRutina.mes<<" / "<<reg.fechaRutina.anio<<endl;
             cout<<"Actividad : "<<reg.actividad<<endl;
@@ -207,7 +208,7 @@ int buscarIDRutina(int id){
 
 void mostrarRutina(Rutina reg){
 
-            cout<<"\n\nID: "<<reg.id<<endl;
+            cout<<"\n\nID entrenamiento: "<<reg.id<<endl;
             cout<<"ID de Usuario : "<<reg.idUsuario<<endl;
             cout<<"Fecha :"<<reg.fechaRutina.dia<<" / " <<reg.fechaRutina.mes<<" / "<<reg.fechaRutina.anio<<endl;
             cout<<"Actividad : "<<reg.actividad<<endl;
