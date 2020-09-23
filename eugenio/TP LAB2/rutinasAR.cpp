@@ -362,8 +362,7 @@ void listarRutinaXIdUsuario(){
     FILE *p;
     Rutina *vecRutinas;
     int idAux,cantReg;
-
-    idAux = crearId();
+    int guardo;
 
     title("Listar entrenamientos por ID de usuario");
     gotoxy(1,3);cout <<"Ingrese ID Usuario:\t";
@@ -383,6 +382,7 @@ void listarRutinaXIdUsuario(){
         if(vecRutinas==NULL){
                 msj("No hay espacio en memoria",WHITE,RED,29,TEXT_LEFT);
                 cls();
+                return;
         }
 
 
@@ -392,7 +392,13 @@ void listarRutinaXIdUsuario(){
                 return;
         }
 
-        fread(vecRutinas,sizeof(Rutina),cantReg,p); /// en el vecRutinas cargo todos los reg
+        guardo = fread(vecRutinas,sizeof(Rutina),cantReg,p); /// en el vecRutinas cargo todos los reg
+            if(guardo!=cantReg){
+                msj("Error al guardar registros",WHITE,RED,29,TEXT_LEFT);
+                cls();
+                return;
+            }
+
         fclose(p);
 
         for(int i=0;i<cantReg;i++){

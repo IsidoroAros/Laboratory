@@ -658,3 +658,154 @@
 	"ui.h"
 	"rlutil.h"
 
+1600619057 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600619052 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\rutinas.h
+	"fechas.h"
+	"usuarios.h"
+
+1600465717 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\fechas.h
+
+1600341535 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\usuarios.h
+	"fechas.h"
+
+1600826904 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\menus.h
+
+1600341535 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\ui.h
+
+1600341535 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600619068 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600829835 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"reportes.h"
+
+1600829375 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600341535 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1600619082 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\usuarios.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600825814 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\configuracion.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"configuracion.h"
+
+1600825711 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\configuracion.h
+
+1600829968 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\reportes.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"reportes.h"
+
+1600827062 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp lab2\reportes.h
+
