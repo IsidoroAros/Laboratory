@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="TPN1" />
+		<Option title="TPN3" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -32,20 +32,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../TP LAB2/fechas.cpp" />
-		<Unit filename="../TP LAB2/fechas.h" />
-		<Unit filename="../TP LAB2/main.cpp" />
-		<Unit filename="../TP LAB2/menus.cpp" />
-		<Unit filename="../TP LAB2/menus.h" />
-		<Unit filename="../TP LAB2/reportes.cpp" />
-		<Unit filename="../TP LAB2/reportes.h" />
-		<Unit filename="../TP LAB2/rlutil.h" />
-		<Unit filename="../TP LAB2/rutinas.cpp" />
-		<Unit filename="../TP LAB2/rutinas.h" />
-		<Unit filename="../TP LAB2/ui.cpp" />
-		<Unit filename="../TP LAB2/ui.h" />
-		<Unit filename="../TP LAB2/usuarios.cpp" />
-		<Unit filename="../TP LAB2/usuarios.h" />
+		<Unit filename="fechas.cpp" />
+		<Unit filename="fechas.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="menus.cpp" />
+		<Unit filename="menus.h" />
+		<Unit filename="reportes.cpp" />
+		<Unit filename="reportes.h" />
+		<Unit filename="rlutil.h" />
+		<Unit filename="rutinas.cpp" />
+		<Unit filename="rutinas.h" />
+		<Unit filename="ui.cpp" />
+		<Unit filename="ui.h" />
+		<Unit filename="usuarios.cpp" />
+		<Unit filename="usuarios.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
