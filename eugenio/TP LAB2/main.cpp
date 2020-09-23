@@ -17,10 +17,18 @@ using namespace rlutil;
 using namespace std;
 
 int main(){
+    int num;
 
-    menu();
+    if (cin >> num){
+        cout << "Todo ok.";
+    }
+    else{
+        cout << "https://imgflip.com/i/4ecsjq";
+    }
 
-return 0;
+    cout << endl << endl << num;
+
+    return 0;
 }
 
 
