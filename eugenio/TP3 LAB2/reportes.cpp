@@ -56,7 +56,7 @@ void  restaurarCopia(){
       cout<<"0. VOLVER AL MENU PRINCIPAL"<<endl;
       cin>>opcion;
       if(opcion==1){
-        CopyFile("archivos/Entrenamientos.dat", "archivos/copia/EntrenamientosBkp.dat", TRUE);        CopyFile("archivos/usuarios.dat", "archivos/copia/usuariosBkp.dat", TRUE);
+        CopyFile( "archivos/copia/EntrenamientosBkp.dat","archivos/Entrenamientos.dat", TRUE);        CopyFile("archivos/copia/usuariosBkp.dat", "archivos/usuarios.dat",  TRUE);
         cout<<"\n\t\t\tse Realizo la restauracion  de  la copia de seguridad al directorio ARCHIVOS: "<<endl;
         system("PAUSE");
       }else{
