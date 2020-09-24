@@ -1,0 +1,281 @@
+# depslib dependency file v1.0
+1600619057 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600619052 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\rutinas.h
+	"fechas.h"
+	"usuarios.h"
+
+1600465717 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\fechas.h
+
+1600341535 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\usuarios.h
+	"fechas.h"
+
+1600826904 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\menus.h
+
+1600341535 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\ui.h
+
+1600341535 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600619068 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600829835 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"reportes.h"
+
+1600827062 d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\reportes.h
+
+1600829968 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\reportes.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"reportes.h"
+
+1600830083 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600821541 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\rutinasar.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600341535 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1600619082 source:d:\reuge\documents\utn\2do cuatri\lab2\lab isidoro\laboratory\eugenio\tp3 lab2\usuarios.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600889618 source:c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\fechas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600901095 c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\rutinas.h
+	"fechas.h"
+	"usuarios.h"
+
+1600889618 c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\fechas.h
+
+1600889618 c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\usuarios.h
+	"fechas.h"
+
+1600893451 c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\menus.h
+
+1600889618 c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\ui.h
+
+1600889618 c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1600899148 source:c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\main.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600901142 source:c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\rutinas.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600889618 source:c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\ui.cpp
+	<iostream>
+	<cstring>
+	"ui.h"
+	"rlutil.h"
+
+1600889618 source:c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\usuarios.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+
+1600899881 source:c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\menus.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"reportes.h"
+
+1600899898 c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\reportes.h
+
+1600901095 source:c:\users\daveq\documents\github\laboratory\dave\preparcial\tp3 lab2\reportes.cpp
+	<iostream>
+	<cstdio>
+	<stdlib.h>
+	<ctime>
+	<string.h>
+	<cstring>
+	<cctype>
+	<algorithm>
+	"rutinas.h"
+	"usuarios.h"
+	"menus.h"
+	"fechas.h"
+	"ui.h"
+	"rlutil.h"
+	"reportes.h"
+
