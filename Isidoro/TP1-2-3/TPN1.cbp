@@ -32,18 +32,22 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="configuracion.cpp" />
+		<Unit filename="configuracion.h" />
 		<Unit filename="fechas.cpp" />
 		<Unit filename="fechas.h" />
-		<Unit filename="funcionesTP.cpp" />
-		<Unit filename="funcionesTP.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menus.cpp" />
 		<Unit filename="menus.h" />
+		<Unit filename="modeloParcial.cpp" />
+		<Unit filename="modeloParcial.h" />
 		<Unit filename="rlutil.h" />
 		<Unit filename="rutinas.cpp" />
 		<Unit filename="rutinas.h" />
 		<Unit filename="ui.cpp" />
 		<Unit filename="ui.h" />
+		<Unit filename="usuarios.cpp" />
+		<Unit filename="usuarios.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

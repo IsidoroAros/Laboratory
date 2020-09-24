@@ -7,11 +7,13 @@
 #include <cctype>
 #include <algorithm>
 #include "rutinas.h"
-#include "funcionesTP.h"
+#include "usuarios.h"
 #include "menus.h"
 #include "fechas.h"
 #include "ui.h"
 #include "rlutil.h"
+#include "modeloParcial.h"
+#include "configuracion.h"
 
 using namespace rlutil;
 using namespace std;
@@ -27,6 +29,8 @@ void menu(){
         cout<<"2 - ENTRENAMIENTOS"<<endl;
         cout<<"3 - REPORTES"<<endl;
         cout<<"4 - CONFIGURACION"<<endl;
+        cout<<"5 - MODELO PARCIAL"<<endl;
+        cout<<"6 - PARCIAL"<<endl;
         cout<<"------------------------"<<endl;
         cout<<"0 - SALIR   "<<endl;
         int opcion;
@@ -41,6 +45,11 @@ void menu(){
             break;
         case 2:
             menuRutinas();
+            break;
+        case 4:
+            menuConfig();
+        case 5:
+            menuPreParcial();
             break;
         case 0:
             return;
@@ -131,6 +140,72 @@ void menuRutinas(){
         case 0:
             return;
             break;
+        default:
+            break;
+        }
+    } while (opcion != 0);
+}
+
+void menuPreParcial(){
+
+int opcion;
+        do {
+        cls();
+        title("MODELO PARCIAL", 0, 45);
+        gotoxy(1, 3); /// El puntero arranca a partir de esta posicion
+        cout << "--------------------------------" << endl;
+        cout << "1) PUNTO A" << endl;
+        cout << "2) PUNTO B" << endl;
+        cout << "--------------------------------" << endl;
+        cout << "0) VOLVER AL MENU PRINCIPAL" << endl;
+
+        cout << "> ";
+        cin >> opcion;
+        system("cls");
+        switch (opcion){
+        case 1:
+            tiempoPromedio();
+            break;
+        case 2:
+            entrenamientos2020();
+            break;
+        case 0:
+            return;
+            break;
+        default:
+            break;
+        }
+    } while (opcion != 0);
+}
+
+void menuConfig(){
+int opcion;
+        do {
+        cls();
+        title("MENU CONFIGURACION", 0, 42);
+        gotoxy(1, 3);
+        cout << "--------------------------------" << endl;
+        cout << "1) REALIZAR COPIA DE SEGURIDAD" << endl;
+        cout << "2) RESTAURAR COPIA DE SEGURIDAD" << endl;
+        cout << "3) CREDITOS" << endl;
+        cout << "--------------------------------" << endl;
+        cout << "0) VOLVER AL MENU PRINCIPAL" << endl;
+        cout << "> ";
+        cin >> opcion;
+        system("cls");
+        switch (opcion){
+        case 1:
+            hacerCopia();
+            break;
+        case 2:
+            restaurarCopia();
+            break;
+        case 3:
+            creditos();
+            break;
+        case 0:
+            return;
+
         default:
             break;
         }

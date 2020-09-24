@@ -7,16 +7,17 @@
 #include <cctype>
 #include <algorithm>
 #include "rutinas.h"
-#include "funcionesTP.h"
+#include "usuarios.h"
 #include "menus.h"
 #include "fechas.h"
 #include "ui.h"
 #include "rlutil.h"
+#include "modeloParcial.h"
 
 using namespace rlutil;
 using namespace std;
 
-const char *FILE_USUARIOS = "archivos/usuarios.dat";
+const char *FILE_USUARIOS = "archivos/Usuarios.dat";
 
 Usuario cargarUsuario(){
 
@@ -26,7 +27,7 @@ Usuario cargarUsuario(){
 
     locate(1,2);cout << "Ingrese ID:\t";
     cin >> registro.id;
-    while(buscarID(registro.id)!=-2 || (registro.id<0 || registro.id>9999)){
+    while(buscarID(registro.id)>=0 || (registro.id<0 || registro.id>9999)){
         msj("ID invalido o preexistente",WHITE,RED,29,TEXT_LEFT);
 
         cls();

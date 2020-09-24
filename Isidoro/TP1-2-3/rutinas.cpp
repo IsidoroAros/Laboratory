@@ -7,16 +7,18 @@
 #include <cctype>
 #include <algorithm>
 #include "rutinas.h"
-#include "funcionesTP.h"
+#include "usuarios.h"
 #include "menus.h"
 #include "fechas.h"
 #include "ui.h"
 #include "rlutil.h"
+#include "modeloParcial.h"
+#include "configuracion.h"
 
 using namespace rlutil;
 using namespace std;
 
-const char *FILE_RUTINAS = "archivos/rutinas.dat";
+const char *FILE_RUTINAS = "archivos/Entrenamientos.dat";
 
 
 void guardarRutina(){
@@ -168,7 +170,7 @@ void listarRutinas(){
     title("LISTAR RUTINAS",BLACK,CYAN);
     while(fread(&reg,sizeof(Rutina),1,p)==1)
     {
-            cout<<"\n\nID: "<<reg.id<<endl;
+            cout<<"\n\nID entrenamiento: "<<reg.id<<endl;
             cout<<"ID de Usuario : "<<reg.idUsuario<<endl;
             cout<<"Fecha :"<<reg.fechaRutina.dia<<" / " <<reg.fechaRutina.mes<<" / "<<reg.fechaRutina.anio<<endl;
             cout<<"Actividad : "<<reg.actividad<<endl;
@@ -207,7 +209,7 @@ int buscarIDRutina(int id){
 
 void mostrarRutina(Rutina reg){
 
-            cout<<"\n\nID: "<<reg.id<<endl;
+            cout<<"\n\nID entrenamiento: "<<reg.id<<endl;
             cout<<"ID de Usuario : "<<reg.idUsuario<<endl;
             cout<<"Fecha :"<<reg.fechaRutina.dia<<" / " <<reg.fechaRutina.mes<<" / "<<reg.fechaRutina.anio<<endl;
             cout<<"Actividad : "<<reg.actividad<<endl;
@@ -362,8 +364,7 @@ void listarRutinaXIdUsuario(){
     FILE *p;
     Rutina *vecRutinas;
     int idAux,cantReg;
-
-    idAux = crearId();
+    int guardo;
 
     title("Listar entrenamientos por ID de usuario");
     gotoxy(1,3);cout <<"Ingrese ID Usuario:\t";
@@ -383,6 +384,7 @@ void listarRutinaXIdUsuario(){
         if(vecRutinas==NULL){
                 msj("No hay espacio en memoria",WHITE,RED,29,TEXT_LEFT);
                 cls();
+                return;
         }
 
 
@@ -392,7 +394,13 @@ void listarRutinaXIdUsuario(){
                 return;
         }
 
-        fread(vecRutinas,sizeof(Rutina),cantReg,p); /// en el vecRutinas cargo todos los reg
+        guardo = fread(vecRutinas,sizeof(Rutina),cantReg,p); /// en el vecRutinas cargo todos los reg
+            if(guardo!=cantReg){
+                msj("Error al guardar registros",WHITE,RED,29,TEXT_LEFT);
+                cls();
+                return;
+            }
+
         fclose(p);
 
         for(int i=0;i<cantReg;i++){

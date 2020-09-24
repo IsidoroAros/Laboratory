@@ -6,11 +6,14 @@
 #include <cctype>
 #include <algorithm>
 #include "rutinas.h"
-#include "funcionesTP.h"
+#include "usuarios.h"
 #include "menus.h"
 #include "fechas.h"
 #include "ui.h"
 #include "rlutil.h"
+#include "modeloParcial.h"
+
+using namespace std;
 
 Fecha hoy(){
 
@@ -47,56 +50,27 @@ bool validarFecha( int dia, int mes, int anio){
 
     Fecha fechaDeHoy;
 
-
     fechaDeHoy = hoy();
+    bool fec = false;
 
- /*   if (fechaDeHoy.mes > mes){edad = fechaDeHoy.anio - anio;}
-    else if(fechaDeHoy.mes == mes){
-
-        if (fechaDeHoy.dia >= dia){edad = fechaDeHoy.anio - anio;}
-
-    } else{edad  = (fechaDeHoy.anio - 1) - anio;}
-
-       if(fechaDeHoy.dia < dia){
-            if(fechaDeHoy.mes <= mes){
-                if(fechaDeHoy.anio <= anio){
-                return false;
-                }
-            }
-        }else if(fechaDeHoy.mes > mes){
-                if(fechaDeHoy.anio <= anio){
-                    return false;
-                }
-        }else*/
-
-
-
-    bool fec = 0;
+    if (anio >= fechaDeHoy.anio )
+        if(mes >= fechaDeHoy.mes)
+         if(dia >= fechaDeHoy.dia){
+            fec=false;
+              return fec;
+    }
 
     if( mes >= 1 && mes <= 12 )
     {
 
         switch( mes ){
 
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            if( dia >= 1 && dia <= 31 ){
-                fec = true;
-            }
+        case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+            if( dia >= 1 && dia <= 31 ){  fec = true;}
             break;
 
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            if( dia >= 1 && dia <= 30 ){
-                fec = true;
-            }
+        case 4:case 6:case 9:case 11:
+            if( dia >= 1 && dia <= 30 ){ fec = true;}
             break;
 
 

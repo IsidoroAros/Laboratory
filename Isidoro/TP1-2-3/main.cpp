@@ -7,21 +7,19 @@
 #include <cctype>
 #include <algorithm>
 #include "rutinas.h"
-#include "funcionesTP.h"
+#include "usuarios.h"
 #include "menus.h"
 #include "fechas.h"
 #include "ui.h"
 #include "rlutil.h"
+#include "modeloParcial.h"
+#include "configuracion.h"
 
 using namespace rlutil;
 using namespace std;
-/*
-int contarRegistro();
-void vectorIdsUsuarios();
-void leerVector(int *vec, int cantidadRegistros);
-*/
+
 int main(){
- 
+
     menu();
 
 return 0;
